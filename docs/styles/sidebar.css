@@ -1,0 +1,56 @@
+
+.side ul {
+  list-style-type: none;
+}
+
+.side button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.side button:hover {
+  background-color: rgb(133, 133, 133);
+}
+
+.side button:active {
+  background-color: rgb(75, 75, 75);
+}
+
+.sidebarspace {
+    flex: 1 1 100%;
+}
+
+.side {
+  -ms-flex: 10%; /* IE10 */
+  flex: 10%;
+  background-color: #f1f1f1;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebarspace {
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebarspace {
+    height: 0px;
+  }
+}

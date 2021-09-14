@@ -1,0 +1,21 @@
+.headerfade {
+    opacity: .5;
+    background-color: black;
+    width: 100%;
+    top: 0;
+    height: 153px;
+    position: absolute;
+  }
+
+  .header {
+    padding: 10px 0px;
+    text-align: center;
+    color: white;
+    background-image: url("https://lh5.googleusercontent.com/p/AF1QipNv3m32eXw2ZWYBlkgQj84WcNgqPt6nBAa_X3oH=h1440");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .header h1 {
+    font-size: 40px;
+  }
