@@ -2,49 +2,48 @@
 <html lang="hu-hu">
 
 <head>
-    <title>Cím</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css"> </head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="icon" type="image/x-icon" href="https://www.nemesgszi.hu/components/images/favicon.png">
+    <title>Az iskola térképe | Békéscsabai SZC Nemes Tihamér Technikum és Kollégium | GSZI |</title>
+</head>
 
 <body>
 
-    <div class="header">
-        <h1>Főcím</h1>
-        <p>Alcím</p>
+    <div class="header" style="z-index: -1;">
+        <div class="headerfade" style="z-index: -1;"></div>
+        <div>
+            <h1>Békéscsabai SZC Nemes Tihamér Technikum és Kollégium</h1>
+            <p>Térkép</p>
+        </div>
     </div>
 
     <div class="navbar">
         <a href="#">Link</a>
         <a href="#">Link</a>
         <a href="#">Link</a>
-        <a href="#" class="right">Link</a>
     </div>
 
     <div class="row">
         <div class="side">
-            <h2>Szöveg0</h2>
-            <h5>Szöveg1</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Szöveg2</p>
-            <h3>Szöveg3</h3>
-            <p>Szöveg4</p>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div>
+            <div>
+                <h2>Épületek</h2>
+                <button onclick="NavigateIframe('main.html')">Főtérkép</button><br><br>
+                <button onclick="NavigateIframe('buildings/buildingMain.html')">Főépület</button><br>
+                <button onclick="NavigateIframe('buildings/buildingB.html')">"B" Épület</button><br>
+                <button onclick="NavigateIframe('buildings/buildingC.html')">"C" Épület</button><br>
+                <button onclick="NavigateIframe('buildings/buildingD.html')">"D" Épület</button><br>
+                <button onclick="NavigateIframe('buildings/buildingE.html')">"E" Épület</button>
+            </div>
+            <div class="sidebarspace"></div>
         </div>
         <div class="main">
-            <h2>Cím</h2>
-            <h5>Cím leírás</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Szöveg5</p>
-            <p>Szöveg6</p>
-            <br>
-            <h2>Cím1</h2>
-            <h5>Cím1 Leírás</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Szöveg7</p>
-            <p>Szöveg8</p>
+            <iframe src="buildings/buildingMain.html"></iframe>
         </div>
     </div>
 
