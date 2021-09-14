@@ -1,0 +1,42 @@
+
+html, body { height: 100% }
+
+* {
+  box-sizing: border-box;
+}
+
+.main iframe {
+  border: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  flex: 100%;
+}
+
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+}
+
+.main iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}

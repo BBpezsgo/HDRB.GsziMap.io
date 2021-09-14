@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu-hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mapStyles.css">
+    <link rel="stylesheet" href="styles/scrollbar.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+</head>
+
+<body>
+
+    <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5); border-radius: 5px;">
+        <label class="switch right">
+            <input type="checkbox" onclick="ChangeView()" id="checkbox" checked>
+            <span class="slider round"></span>
+        </label>
+        <div class="label" style="color: white;">
+            Műholdas nézet:
+        </div>
+    </div>
+
+    <div class="main">
+        <img src="mainSatellite.jpg" id="mapimage">
+    </div>
+
+</body>
+
+<script>
+    function ChangeView() {
+        if (document.getElementById("checkbox").checked == true) {
+            document.getElementById("mapimage").setAttribute("src", "mainSatellite.jpg")
+        } else {
+            document.getElementById("mapimage").setAttribute("src", "mainSimple.png")
+        }
+    }
+</script>
+
+</html>
