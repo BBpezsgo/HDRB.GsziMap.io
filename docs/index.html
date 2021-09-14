@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu-hu">
 
+<head>
+    <title>Cím</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body>
+
+    <div class="header">
+        <h1>Főcím</h1>
+        <p>Alcím</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#" class="right">Link</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>Szöveg0</h2>
+            <h5>Szöveg1</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Szöveg2</p>
+            <h3>Szöveg3</h3>
+            <p>Szöveg4</p>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div>
+        </div>
+        <div class="main">
+            <h2>Cím</h2>
+            <h5>Cím leírás</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Szöveg5</p>
+            <p>Szöveg6</p>
+            <br>
+            <h2>Cím1</h2>
+            <h5>Cím1 Leírás</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Szöveg7</p>
+            <p>Szöveg8</p>
+        </div>
+    </div>
+
+</body>
+<script>
+    function NavigateIframe(url) {
+        document.getElementsByTagName("iframe")[0].src = url;
+    }
+</script>
+
+</html>
