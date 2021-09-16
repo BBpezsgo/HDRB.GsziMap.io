@@ -51,3 +51,75 @@ html, body { height: 100% }
       margin-right: auto;
       width: 100%;
   }
+
+
+
+
+  .building {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+
+    border-spacing: 50px;
+    border-color: white;
+    border-width: 0px;
+    border-style: solid;
+
+    transition-duration: .1s;
+  }
+  .building:hover {
+    border-spacing: 50px;
+    border-color: white;
+    border-width: 6px;
+    border-style: solid;
+
+    transition-duration: .3s;
+  }
+  .building:active {
+    border-spacing: 50px;
+    border-color: silver;
+    border-width: 6px;
+    border-style: solid;
+
+    transition-duration: .2s;
+  }
+
+/* Tooltip text */
+.building .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(71, 71, 71);
+  color: rgb(224, 224, 224);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 7px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.building .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(71, 71, 71) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.building:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
