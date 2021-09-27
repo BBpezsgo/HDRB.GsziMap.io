@@ -34,9 +34,7 @@ html, body { height: 100% }
 
   .main img {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
+      width: 980px;
   }
 
 .mainMap {
@@ -46,10 +44,8 @@ html, body { height: 100% }
   }
   
   .mainMap img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
+    display: block;
+    width: 980px;
   }
 
 
