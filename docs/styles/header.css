@@ -3,7 +3,7 @@
     background-color: black;
     width: 100%;
     top: 0;
-    height: 153px;
+    height: 100%;
     position: absolute;
   }
 
@@ -18,4 +18,24 @@
   
   .header h1 {
     font-size: 40px;
+  }
+
+
+  @media screen and (max-width: 1200px) {
+    #TitleText {
+      font-size: 25px;
+    }
+
+    .header {
+      padding: 5px 0px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    #TitleText {
+      font-size: 15px;
+    }
+
+    .header {
+      padding: 0px 0px;
+    }
   }
