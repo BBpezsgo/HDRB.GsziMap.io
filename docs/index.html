@@ -13,6 +13,8 @@
     <link rel="icon" type="image/x-icon" href="https://www.nemesgszi.hu/components/images/favicon.png">
     <title>Az iskola térképe | Békéscsabai SZC Nemes Tihamér Technikum és Kollégium | GSZI |</title>
     <script src="scripts.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -29,11 +31,15 @@
         <a onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;">
             Készítők
         </a>
+        <a style="float: right; cursor: pointer;"
+            onclick="document.getElementById('sidebar').classList.toggle('sideHidden')" class="mobileMenuToggleButton">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 
     <div class="row">
-        <div class="side">
-            <div>
+        <div id="sidebar" class="side sideHidden">
+            <div class="sidebarButtons">
                 <div class="sideButton">
                     <button onclick="NavigateIframe('main.html')">
                         <span>Főtérkép</span>
@@ -66,7 +72,6 @@
                     </button>
                 </div>
             </div>
-            <div class="sidebarspace"></div>
         </div>
         <div class="main">
             <iframe src="main.html"></iframe>
