@@ -22,10 +22,3 @@
     background-color: #ddd;
     color: black;
   }
-
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: none;
-      width: 100%;
-    }
-  }
