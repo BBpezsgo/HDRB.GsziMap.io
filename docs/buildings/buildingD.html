@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu-hu">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,47 +8,47 @@
     <link rel="stylesheet" href="../styles/scrollbar.css">
     <script src="../scripts.js"></script>
 </head>
+
 <body>
 
-<div class="header">
-  <h1>"D" épület</h1>
-  <p>az főépület mögött</p>
-</div>
+    <div class="header">
+        <h1>"D" épület</h1>
+        <p>az főépület mögött</p>
+    </div>
 
-<div class="row">
-  <div class="main">
-      <img src="../aaaaaaaaaaaaaaaaaaa.jpg">
-  </div>
-</div>
+    <div class="mainMap">
+        <img src="../aaaaaaaaaaaaaaaaaaa.jpg">
+    </div>
 
     <!--Anti select-->
-    <p>
-      <script type="text/javascript">
-          //form tags to omit in NS6+:
-          var omitformtags = ["input", "textarea", "select"]
-          omitformtags = omitformtags.join("|")
-          function disableselect(e) {
-              if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
-                  return false
-          }
-          function reEnable() {
-              return true
-          }
-          if (typeof document.onselectstart != "undefined")
-              document.onselectstart = new Function("return false")
-          else {
-              document.onmousedown = disableselect
-              document.onmouseup = reEnable
-          }
-      </script>
-      <script type="text/javascript">
-          try {
-              var pageTracker = _gat._getTracker("UA-549331-28");
-              pageTracker._trackPageview();
-          } catch (err) {
+    <p style="position:absolute; top: 0;">
+        <script type="text/javascript">
+            //form tags to omit in NS6+:
+            var omitformtags = ["input", "textarea", "select"]
+            omitformtags = omitformtags.join("|")
+            function disableselect(e) {
+                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                    return false
+            }
+            function reEnable() {
+                return true
+            }
+            if (typeof document.onselectstart != "undefined")
+                document.onselectstart = new Function("return false")
+            else {
+                document.onmousedown = disableselect
+                document.onmouseup = reEnable
+            }
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-549331-28");
+                pageTracker._trackPageview();
+            } catch (err) {
 
-          }
-      </script>
-  </p>
+            }
+        </script>
+    </p>
 </body>
+
 </html>
