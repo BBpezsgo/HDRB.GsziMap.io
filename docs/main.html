@@ -12,7 +12,7 @@
 
 <body>
 
-    <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5); border-radius: 5px;">
+    <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5);">
         <label class="switch right">
             <input type="checkbox" onclick="ChangeView()" id="checkbox" checked>
             <span class="slider round"></span>
@@ -24,19 +24,25 @@
 
     <div class="main">
         <img src="mainSatellite.jpg" id="mapimage">
-        <div class="building" id="buildingmain" style="top: 340px; left: 45px; width: 180px; height: 200px;" onclick="window.location = 'buildings/buildingMain.html'">
+        <div class="building" id="buildingmain" style="top: 340px; left: 45px; width: 180px; height: 200px;"
+            onclick="window.location = 'buildings/buildingMain.html'">
             <span class="tooltiptext">Főépület</span>
         </div>
-        <div class="building" id="buildingb" style="top: 565px; left: 65px; width: 200px; height: 45px;" onclick="window.location = 'buildings/buildingB.html'">
+        <div class="building" id="buildingb" style="top: 565px; left: 65px; width: 200px; height: 45px;"
+            onclick="window.location = 'buildings/buildingB.html'">
             <span class="tooltiptext">"B" épület</span>
         </div>
-        <div class="building" id="buildingb" style="top: 566px; left: 218px; width: 220px; height: 90px; transform: rotate(-33deg);" onclick="window.location = 'buildings/buildingB.html'">
+        <div class="building" id="buildingb"
+            style="top: 566px; left: 218px; width: 220px; height: 90px; transform: rotate(-33deg);"
+            onclick="window.location = 'buildings/buildingB.html'">
             <span class="tooltiptext" style="transform: rotate(33deg);">"C" épület</span>
         </div>
-        <div class="building" id="buildingd" style="top: 380px; left: 243px; width: 160px; height: 160px;" onclick="window.location = 'buildings/buildingD.html'">
+        <div class="building" id="buildingd" style="top: 380px; left: 243px; width: 160px; height: 160px;"
+            onclick="window.location = 'buildings/buildingD.html'">
             <span class="tooltiptext">"D" épület</span>
         </div>
-        <div class="building" id="buildinge" style="top: 400px; left: 433px; width: 150px; height: 45px;" onclick="window.location = 'buildings/buildingE.html'">
+        <div class="building" id="buildinge" style="top: 400px; left: 433px; width: 150px; height: 45px;"
+            onclick="window.location = 'buildings/buildingE.html'">
             <span class="tooltiptext">"E" épület</span>
         </div>
         <div class="building" id="buildinge" style="top: 449px; left: 400px; width: 157px; height: 90px;">
@@ -48,7 +54,7 @@
     </div>
 
     <!--Anti select-->
-    <p>
+    <p style="position:absolute; top: 0;">
         <script type="text/javascript">
             //form tags to omit in NS6+:
             var omitformtags = ["input", "textarea", "select"]
