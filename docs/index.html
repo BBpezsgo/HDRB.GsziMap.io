@@ -13,11 +13,37 @@
     <link rel="icon" type="image/x-icon" href="https://www.nemesgszi.hu/components/images/favicon.png">
     <title>Az iskola térképe | Békéscsabai SZC Nemes Tihamér Technikum és Kollégium | GSZI |</title>
     <script src="scripts.js"></script>
+    <script type="text/javascript">
+        function NavigateIframe(url) {
+            document.getElementsByTagName("iframe")[0].src = url;
+        }
+        function OnLoad() {
+            var url = window.location.href
+            if (url.includes('#')) {
+                var suburl = url.split('#')[1]
+                if (suburl === 'buildingMain') {
+                    NavigateIframe('buildings/buildingMain.html')
+                } else if (suburl === 'buildingB') {
+                    NavigateIframe('buildings/buildingB.html')
+                } else if (suburl === 'buildingC') {
+                    NavigateIframe('buildings/buildingC.html')
+                } else if (suburl === 'buildingD') {
+                    NavigateIframe('buildings/buildingD.html')
+                } else if (suburl === 'buildingE') {
+                    NavigateIframe('buildings/buildingE.html')
+                } else {
+                    //Suburl not found
+                }
+            } else {
+                //Simple navigate
+            }
+        }
+    </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body onload="OnLoad()">
 
     <div class="header" style="z-index: -1;">
         <div class="headerfade" style="z-index: -1;"></div>
@@ -129,12 +155,6 @@
         </script>
     </p>
 </body>
-<script>
-    function NavigateIframe(url) {
-        document.getElementsByTagName("iframe")[0].src = url;
-    }
-</script>
-
 <script>
     var modal = document.getElementById('id01');
 
