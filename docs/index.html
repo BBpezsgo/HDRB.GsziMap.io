@@ -10,12 +10,22 @@
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/scrollbar.css">
     <link rel="icon" type="image/x-icon" href="https://www.nemesgszi.hu/components/images/favicon.png">
     <title>Az iskola térképe | Békéscsabai SZC Nemes Tihamér Technikum és Kollégium | GSZI |</title>
     <script src="scripts.js"></script>
     <script type="text/javascript">
+        function showMainBuildingChilds() {
+            document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
+        }
         function NavigateIframe(url) {
             document.getElementsByTagName("iframe")[0].src = url;
+
+            if (url.includes('buildingMain')) {
+                document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
+            } else {
+                document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
+            }
         }
         function OnLoad() {
             var url = window.location.href
@@ -31,6 +41,14 @@
                     NavigateIframe('buildings/buildingD.html')
                 } else if (suburl === 'buildingE') {
                     NavigateIframe('buildings/buildingE.html')
+                } else if (suburl === 'buildingMain.0a') {
+                    NavigateIframe('buildings/buildingMain0a.html')
+                } else if (suburl === 'buildingMain.0b') {
+                    NavigateIframe('buildings/buildingMain0b.html')
+                } else if (suburl === 'buildingMain.1') {
+                    NavigateIframe('buildings/buildingMain1.html')
+                } else if (suburl === 'buildingMain.2') {
+                    NavigateIframe('buildings/buildingMain2.html')
                 } else {
                     //Suburl not found
                 }
@@ -73,9 +91,31 @@
                 </div>
                 <h2>Épületek</h2>
                 <div class="sideButton">
-                    <button onclick="NavigateIframe('buildings/buildingMain.html')">
+                    <button onclick="showMainBuildingChilds()">
                         <span>Főépület</span>
                     </button>
+                </div>
+                <div id="sideButtonGroupMainbuilding" class="sidebuttonGroup" style="height: 0px;">
+                    <div class="sideButton">
+                        <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                            <span>Földszint</span>
+                        </button>
+                    </div>
+                    <div class="sideButton">
+                        <button onclick="NavigateIframe('buildings/buildingMain0b.html')">
+                            <span>Földszint - aula</span>
+                        </button>
+                    </div>
+                    <div class="sideButton">
+                        <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                            <span>1. emelet</span>
+                        </button>
+                    </div>
+                    <div class="sideButton">
+                        <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                            <span>2. emelet</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="sideButton">
                     <button onclick="NavigateIframe('buildings/buildingB.html')">
