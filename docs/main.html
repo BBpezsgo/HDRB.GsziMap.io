@@ -9,16 +9,14 @@
     <link rel="stylesheet" href="./styles/slider.css">
     <link rel="stylesheet" href="./styles/load.css">
     <link rel="stylesheet" href="./styles/compass.css">
+    <link rel="stylesheet" href="./styles/mapMarkers.css">
     <script src="scripts.js"></script>
 </head>
 
 <body>
-    <div class="compass">
-        <div class="arrow"></div>
-        <div class="compass-circle"></div>
-        <div class="my-point"></div>
-      </div>
-
+    <div class="compassBox">
+        <div class="compass" style="transform: rotate(15deg);"><img src="c.png"></div>
+    </div>
     <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5);">
         <label class="switch right">
             <input type="checkbox" onclick="ChangeView()" id="checkbox" checked>
@@ -28,6 +26,8 @@
             Műholdas nézet:
         </div>
     </div>
+
+    <button onclick="parent.alert('aa'); ">xd</button>
 
     <div class="main">
         <img src="mainSatellite.jpg" id="mapimage">
@@ -42,7 +42,7 @@
         </div>
         <div class="building" id="buildingb"
             style="top: 566px; left: 218px; width: 220px; height: 90px; transform: rotate(-33deg);"
-            onclick="window.location = 'buildings/buildingB.html'">
+            onclick="window.location = 'buildings/buildingC.html'">
             <span class="tooltiptext" style="transform: rotate(33deg);">"C" épület</span>
         </div>
         <div class="building" id="buildingd" style="top: 380px; left: 243px; width: 160px; height: 160px;"
