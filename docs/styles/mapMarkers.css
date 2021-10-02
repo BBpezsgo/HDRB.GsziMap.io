@@ -1,0 +1,22 @@
+.simpleMarker {
+    background-color:#00bbff;
+    position: absolute;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+    border: 3px #008ec2 solid;
+    padding: 0px 2px;
+    font-weight: bold;
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: default;
+    transition-duration: 500ms;
+}
+
+.simpleMarker img {
+    width: 16px;
+    height: 16px;
+    display: inline;
+}
+
+.simpleMarker:hover {
+    opacity: .5;
+}
