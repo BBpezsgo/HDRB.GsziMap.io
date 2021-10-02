@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu-hu">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,91 +9,107 @@
     <link rel="stylesheet" href="../styles/load.css">
     <link rel="stylesheet" href="../styles/classes.css">
     <link rel="stylesheet" href="../styles/mapMarkers.css">
+    <link rel="stylesheet" href="../styles/compass.css">
     <script src="../scripts.js"></script>
 </head>
-<body>
 
-<div class="header">
-  <h1>2. emelet</h1>
-  <p>a lépcsőn még feljebb</p>
-</div>
+<body onload="var x = window.location.href; parent.ResetButtons(x)">
+    <div class="compassBox" style="top: 120px;">
+        <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
+    </div>
 
-<div id="loadeffect" class="mainMap">
-  <img src="./images/buildingMain2.png">
-  <div class="class classClickable" style="top: 35px; left: 285px; width: 206px; height: 216px;">
-      <p>Bánki terem</p>
-  </div>
-  <div class="class" style="top: 35px; left: 486px; width: 177px; height: 102px;">
-      <p>Szertár</p>
-  </div>
-  <div class="class classClickable" style="top: 132px; left: 486px; width: 177px; height: 225px;">
-      <p>Pattantyús terem</p>
-  </div>
-  <div class="class" style="top: 352px; left: 486px; width: 177px; height: 84px;">
-      <p>Iroda</p>
-  </div>
-  <div class="class" style="top: 431px; left: 486px; width: 177px; height: 108px;">
-      <p>Titkárság</p>
-  </div>
-  <div class="class" style="top: 536px; left: 486px; width: 177px; height: 170px;">
-      <p>Igazgatói iroda</p>
-  </div>
-  <div class="class" style="top: 699px; left: 486px; width: 177px; height: 90px;">
-      <p>Ig. Hely. iroda</p>
-  </div>
-  <div class="class" style="top: 783px; left: 310px; width: 353px; height: 170px;">
-      <p>Tanári</p>
-  </div>
-  <!--<div class="class" style="top: 696px; left: 310px; width: 116px; height: 92px;">
-      <p>Kávézó</p>
-  </div>
-  <div class="class" style="top: 618px; left: 310px; width: 116px; height: 84px;">
-      <p>Lépcsőház</p>
-  </div>
-  <div class="class" style="top: 544px; left: 310px; width: 116px; height: 77px;">
-      <p>WC</p>
-  </div>
-  <div class="class" style="top: 465px; left: 310px; width: 116px; height: 85px;">
-      <p>WC</p>
-  </div>-->
-  <div class="class" style="top: 366px; left: 310px; width: 116px; height: 104px;">
-      <p>Irattár</p>
-  </div>
 
-  <div class="simpleMarker" style="top: 727px; left: 327px;"><img src="../coffee.png">Kávézó</div>
-  <div class="simpleMarker" style="top: 647px; left: 327px;"><img src="../stairs.png">Lépcső</div>
-  <div class="simpleMarker" style="top: 570px; left: 327px;"><img src="../wcBlack.png">WC</div>
-  <div class="simpleMarker" style="top: 490px; left: 327px;"><img src="../wcBlack.png">WC</div>
-</div>
+    <div class="header">
+        <h1>2. emelet</h1>
+        <p>a lépcsőn még feljebb</p>
+    </div>
+
+    <div id="loadeffect" class="mainMap">
+        <img src="./images/buildingMain2.png">
+        <div class="class classClickable" style="top: 35px; left: 285px; width: 206px; height: 216px;"
+            onclick="parent.ShowForm('Bánki terem', 'Bánki terem leírás')">
+            <p>Bánki terem</p>
+        </div>
+        <div class="place" style="top: 35px; left: 486px; width: 177px; height: 102px;">
+            <p style="
+            background-color: rgba(0,0,0,0.6);
+            border-color: rgb(77, 77, 77);
+            color: rgb(223, 223, 223);
+          "><img src="../storage.png">Szertár</p>
+        </div>
+        <div class="class classClickable" style="top: 132px; left: 486px; width: 177px; height: 225px;"
+            onclick="parent.ShowForm('Pattantyús terem', 'Pattantyús terem leírás')">
+            <p>Pattantyús terem</p>
+        </div>
+        <div class="class" style="top: 352px; left: 486px; width: 177px; height: 84px;">
+            <p>Gazdasági iroda</p>
+        </div>
+        <div class="class" style="top: 431px; left: 486px; width: 177px; height: 108px;">
+            <p>Titkárság</p>
+        </div>
+        <div class="class" style="top: 536px; left: 486px; width: 177px; height: 170px;">
+            <p>Igazgatói iroda</p>
+        </div>
+        <div class="class" style="top: 699px; left: 486px; width: 177px; height: 90px;">
+            <p>Ig. Hely. iroda</p>
+        </div>
+        <div class="class" style="top: 783px; left: 310px; width: 353px; height: 170px;">
+            <p>Tanári</p>
+        </div>
+        <div class="movement" style="top: 618px; left: 310px; width: 116px; height: 84px;"
+            onclick="window.location.href = '../buildings/buildingMain1.html'">
+            <span class="tooltiptext">Le az 1. emeletre</span>
+            <p><img src="../stairsDown.png">Lépcső</p>
+        </div>
+        <div class="movement" style="top: 35px; left: 215px; width: 75px; height: 277px;"
+            onclick="window.location.href = '../main.html'">
+            <span class="tooltiptext">Ki az udvarra</span>
+            <p><img src="../stairs.png">Vaslépcső</p>
+        </div>
+        <div class="place" style="top: 696px; left: 310px; width: 116px; height: 92px;">
+            <p style="background-color:#83530a;border: 3px #643f07 solid; color: white;"><img src="../coffee.png">Kávézó
+            </p>
+        </div>
+        <div class="place" style="top: 544px; left: 310px; width: 116px; height: 77px;">
+            <p><img src="../wcBlack.png">WC</p>
+        </div>
+        <div class="place" style="top: 465px; left: 310px; width: 116px; height: 85px;">
+            <p><img src="../wcBlack.png">WC</p>
+        </div>
+        <div class="class" style="top: 366px; left: 310px; width: 116px; height: 104px;">
+            <p>Irattár</p>
+        </div>
+    </div>
 
     <!--Anti select-->
     <p style="position:absolute; top: 0;">
-      <script type="text/javascript">
-          //form tags to omit in NS6+:
-          var omitformtags = ["input", "textarea", "select"]
-          omitformtags = omitformtags.join("|")
-          function disableselect(e) {
-              if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
-                  return false
-          }
-          function reEnable() {
-              return true
-          }
-          if (typeof document.onselectstart != "undefined")
-              document.onselectstart = new Function("return false")
-          else {
-              document.onmousedown = disableselect
-              document.onmouseup = reEnable
-          }
-      </script>
-      <script type="text/javascript">
-          try {
-              var pageTracker = _gat._getTracker("UA-549331-28");
-              pageTracker._trackPageview();
-          } catch (err) {
+        <script type="text/javascript">
+            //form tags to omit in NS6+:
+            var omitformtags = ["input", "textarea", "select"]
+            omitformtags = omitformtags.join("|")
+            function disableselect(e) {
+                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                    return false
+            }
+            function reEnable() {
+                return true
+            }
+            if (typeof document.onselectstart != "undefined")
+                document.onselectstart = new Function("return false")
+            else {
+                document.onmousedown = disableselect
+                document.onmouseup = reEnable
+            }
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-549331-28");
+                pageTracker._trackPageview();
+            } catch (err) {
 
-          }
-      </script>
-  </p>
+            }
+        </script>
+    </p>
 </body>
+
 </html>

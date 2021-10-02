@@ -20,12 +20,7 @@
         }
         function NavigateIframe(url) {
             document.getElementsByTagName("iframe")[0].src = url;
-
-            if (url.includes('buildingMain')) {
-                document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
-            } else {
-                document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
-            }
+            ResetButtons(url)
         }
         function OnLoad() {
             var url = window.location.href
@@ -56,6 +51,23 @@
                 //Simple navigate
             }
         }
+        /**
+         * @param {string} title
+         * @param {string} context
+         */
+        function ShowForm(title, context) {
+            document.getElementById('CustomFormTitle').textContent = title
+            document.getElementById('CustomFormContext').textContent = context
+            document.getElementById('id02').style.display='block'
+        }
+        function ResetButtons(url) {
+            if (url.includes('buildingMain')) {
+                document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
+            } else {
+                document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
+            }
+        }
+        document.getElementsByTagName("iframe")[0].onchange = ResetButtons(document.getElementsByTagName("iframe")[0].contentWindow.location.href)
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -91,7 +103,7 @@
                 </div>
                 <h2>Épületek</h2>
                 <div class="sideButton">
-                    <button onclick="showMainBuildingChilds()">
+                    <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
                         <span>Főépület</span>
                     </button>
                 </div>
@@ -145,7 +157,7 @@
     </div>
 
 
-    <!--Form-->
+    <!--Form Creators-->
     <div id="id01" class="modal">
         <div class="modal-content animate">
             <div class="imgcontainer">
@@ -161,6 +173,21 @@
                     <li> Baukó Hunor</li>
                     <li> Bánszky Balázs</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Form Custom-->
+    <div id="id02" class="modal" onclick="document.getElementById('id02').style.display='none'">
+        <div class="modal-content animate">
+            <div class="imgcontainer">
+                <div id="CustomFormTitle">Cím</div>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Bezár">
+                </span>
+            </div>
+
+            <div id="CustomFormContext" class="container" style="font-size: 20px;">
+                Szöveg
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
     <script src="../scripts.js"></script>
 </head>
 
-<body>
+<body onload="var x = window.location.href; parent.ResetButtons(x)">
     <div class="compassBox" style="top: 120px;">
         <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
     </div>
@@ -25,32 +25,44 @@
 
 
     <div class="mainMap">
-        <img src="./images/buildingD.png">
+        <img src="./images/buildingD másolata.png">
 
-        <div class="class" style="top: 67px; left: 244px; width: 672px; height: 319px;">
+        <div class="class" style="top: 60px; left: 220px; width: 610px; height: 290px;">
             <p>Tornaterem</p>
         </div>
-        <div class="class" style="top: 380px; left: 694px; width: 224px; height: 130px;">
-            <p>Szertár</p>
+        <div class="place" style="top: 346px; left: 630px; width: 200px; height: 110px;">
+            <p style="
+            background-color: rgba(0,0,0,0.6);
+            border-color: rgb(77, 77, 77);
+            color: rgb(223, 223, 223);
+          "><img src="../storageSport.png">Szertár</p>
         </div>
-        <div class="class" style="top: 380px; left: 360px; width: 179px; height: 313px;">
+        <div class="class" style="top: 345px; left: 327px; width: 160px; height: 284px;">
             <p>4-5. Férfiöltöző</p>
         </div>
-        <div class="class" style="top: 689px; left: 360px; width: 179px; height: 116px;">
+        <div class="class" style="top: 624px; left: 327px; width: 160px; height: 106px;">
             <p>3. Női öltöző</p>
         </div>
-        <div class="class" style="top: 800px; left: 360px; width: 179px; height: 103px;">
+        <div class="class" style="top: 726px; left: 327px; width: 160px; height: 93px;">
             <p>9. Öltöző</p>
         </div>
-        <div class="class" style="top: 528px; left: 50px; width: 200px; height: 189px;">
+        <div class="class" style="top: 476px; left: 46px; width: 180px; height: 174px;">
             <p>Tanári szoba</p>
         </div>
-        <div class="class" style="top: 712px; left: 50px; width: 200px; height: 189px;">
+        <div class="class" style="top: 644px; left: 46px; width: 180px; height: 174px;">
             <p>10. Öltöző</p>
         </div>
+        <div class="class classClickable" style="top: 880px; left: 629px; width: 154px; height: 260px;"
+            onclick="parent.ShowForm('Pascal terem', 'Pascal terem leírás')">
+            <p>Pascal</p>
+        </div>
+        <div class="class classClickable" style="top: 880px; left: 779px; width: 153px; height: 260px;"
+            onclick="parent.ShowForm('Kempelen terem', 'Kempelen terem leírás')">
+            <p>Kempelen</p>
+        </div>
 
-        <div class="simpleMarker" style="top: 515px; left: 360px;"><img src="../wcManBlack.png">WC</div>
-        <div class="simpleMarker" style="top: 618px; left: 360px;"><img src="../wcManBlack.png">WC</div>
+        <div class="simpleMarker" style="top: 465px; left: 327px;"><img src="../wcManBlack.png">WC</div>
+        <div class="simpleMarker" style="top: 560px; left: 327px;"><img src="../wcManBlack.png">WC</div>
     </div>
 
     <!--Anti select-->

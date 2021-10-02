@@ -93,20 +93,32 @@ html, body { height: 100% }
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
     padding: 0px 2px;
     border-radius: 8px;
     border: 3px rgb(77, 77, 77) solid;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
     transition-duration: 500ms;
     font-weight: bold;
+    cursor: default;
   }
 
   .class p:hover {
     opacity: .5;
   }
 
-/* Tooltip text */
+  .classClickable p {
+    cursor: pointer;
+  }
+
+  .class p img {
+    width: 16px;
+    height: 16px;
+    display: inline;
+    margin-right: 3px;
+  }
+
+/* Tooltip */
 .class .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -126,9 +138,9 @@ html, body { height: 100% }
   /* Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s;
-}
 
-/* Tooltip arrow */
+  pointer-events: none;
+}
 .class .tooltiptext::after {
   content: "";
   position: absolute;
@@ -139,9 +151,199 @@ html, body { height: 100% }
   border-style: solid;
   border-color: rgb(71, 71, 71) transparent transparent transparent;
 }
-
-/* Show the tooltip text when you mouse over the tooltip container */
 .class:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.movement {
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+
+  border-spacing: 50px;
+  border-color: #00ff40;
+  border-width: 0px;
+  border-style: solid;
+
+  transition-duration: .1s;
+
+  text-align: center;
+}
+.movement:hover {
+  border-spacing: 50px;
+  border-color: #00ff40;
+  border-width: 6px;
+  border-style: solid;
+
+  transition-duration: .3s;
+}
+.movement:hover p {
+  font-size:large;
+}
+.movement:active {
+  border-spacing: 50px;
+  border-color: #00c241;
+  border-width: 6px;
+  border-style: solid;
+
+  transition-duration: .2s;
+}
+
+.movement p {
+  background-color:#00ff40;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+  border: 3px #00c241 solid;
+  padding: 0px 2px;
+  font-weight: bold;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition-duration: 500ms;
+
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.movement p:hover {
+  opacity: .5;
+}
+
+.movement p img {
+  width: 16px;
+  height: 16px;
+  display: inline;
+}
+
+/* Tooltip */
+.movement .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(71, 71, 71);
+  color: rgb(224, 224, 224);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 7px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  pointer-events: none;
+}
+.movement .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(71, 71, 71) transparent transparent transparent;
+}
+.movement:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.place {
+  position: absolute;
+  display: inline-block;
+
+  /*border: red 1px solid;*/
+
+  transition-duration: .1s;
+
+  text-align: center;
+}
+.place:hover {
+  transition-duration: .3s;
+  width: 100px;
+}
+
+.place img {
+  width: 16px;
+  height: 16px;
+  display: inline;
+  margin-right: 3px;
+}
+
+.place p {
+  background-color:#00bbff;
+  border: 3px #008ec2 solid;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+  padding: 0px 2px;
+  font-weight: bold;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition-duration: 500ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  cursor: default;
+  overflow: hidden;
+  max-width: fit-content;
+  width: 25px;
+}
+
+.place p:hover {
+  opacity: .5;
+}
+.place:hover p {
+  transition-duration: .7s;
+  transition-delay: 0s;
+  width: 150px;
+}
+
+/* Tooltip */
+.place .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(71, 71, 71);
+  color: rgb(224, 224, 224);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 7px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  pointer-events: none;
+}
+
+.place .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(71, 71, 71) transparent transparent transparent;
+}
+
+.place:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }

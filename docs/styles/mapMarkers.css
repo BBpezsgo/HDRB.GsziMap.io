@@ -9,14 +9,22 @@
     white-space: nowrap;
     cursor: default;
     transition-duration: 500ms;
+    width: 16px;
+    overflow: hidden;
+    max-width: min-content;
+    
+    max-width: auto;
+    width: 25px;
 }
 
 .simpleMarker img {
     width: 16px;
     height: 16px;
     display: inline;
+    margin-right: 3px;
 }
 
 .simpleMarker:hover {
     opacity: .5;
+    width: 100px;
 }
