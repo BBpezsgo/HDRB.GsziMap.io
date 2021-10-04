@@ -50,6 +50,16 @@
             } else {
                 //Simple navigate
             }
+
+            
+            // Declare variables
+            var ul, li, i;
+            ul = document.getElementById("SearchList");
+            li = ul.getElementsByTagName('li');
+            
+            for (i = 0; i < li.length; i++) {
+                li[i].style.display = "none";
+            }
         }
         /**
          * @param {string} title
@@ -69,7 +79,33 @@
         }
         document.getElementsByTagName("iframe")[0].onchange = ResetButtons(document.getElementsByTagName("iframe")[0].contentWindow.location.href)
     </script>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("SearchList");
+            li = ul.getElementsByTagName('li');
 
+            if (filter.length == 0) {
+                document.getElementById('SearchList').style.display='none';
+            } else {
+                document.getElementById('SearchList').style.display='block';
+            }
+            
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -149,6 +185,349 @@
                         <span>"E" Épület</span>
                     </button>
                 </div>
+            </div>
+            <div style="flex-grow : 1; display: flex; flex-flow: column;">
+                
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Terem keresése...">
+
+                <ul id="SearchList">
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Számítástechnika tanári</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Frey</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Neumann</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Nemes</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Kalmár</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Bábel</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Rendszergazdai szoba</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Széchenyi</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Könyvtár</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Arany</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Büfé</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>GDSZ</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Vörös</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Tanügyi iroda</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Kós</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Bólyai</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Multimédia</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Jánossy</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Okt. techn.</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Diákstúdió</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Dialóg</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Tanári</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Igazgatóhelyettesi</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Igazgatói</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Titkárság</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Gazdasági iroda</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Pattantyús</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Bánki</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Porta</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Gyakorlati oktatói szoba</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Orvosi szoba</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Fémipari műhely</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Chomsky</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Zorkóczy</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Mechanikai mérő</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>CNC oktató</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Forgácsoló műhely</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Asztalos műhely</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Épületgépészeti műhely</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Tornaterem</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Pascal</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Turbo</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Kempelen</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Bay</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Gábor Dénes</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Hardver-mérő</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Öveges</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sideListButton">
+                            <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <span>Szilárd</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="main">
