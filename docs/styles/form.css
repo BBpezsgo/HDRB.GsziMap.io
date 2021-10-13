@@ -45,22 +45,21 @@ span.psw {
   top: 0;
   width: 30px;
   height: 30px;
-  border-radius: 5px;
 
-  background-color: rgb(190, 190, 190);
+  background-color: #bebebe;
   content: url("../x1.png");
 }
 
 .close:hover,
 .close:focus {
-  background-color: rgb(255, 0, 0);
+  background-color: #777777;
   cursor: pointer;
   align-content: center;
   content: url("../x2.png");
 }
 
 .close:active {
-    background-color: rgb(177, 0, 0);
+    background-color: #ff0000;
     cursor: pointer;
     align-content: center;
     content: url("../x2.png");

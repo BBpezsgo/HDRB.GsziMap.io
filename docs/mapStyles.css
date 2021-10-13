@@ -45,7 +45,7 @@ html, body { height: 100% }
   
   .mainMap img {
     display: block;
-    width: 980px;
+    width: 100%;
   }
 
 

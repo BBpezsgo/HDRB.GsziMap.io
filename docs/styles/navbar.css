@@ -11,14 +11,19 @@
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+    transition-duration: 200ms;
   }
   
   .navbar a.right {
     float: right;
   }
   
-  /* Change color on hover */
   .navbar a:hover {
     background-color: #ddd;
+    color: black;
+  }
+
+  .navbar a:active {
+    background-color: #afafaf;
     color: black;
   }
