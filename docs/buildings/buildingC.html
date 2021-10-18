@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="../styles/scrollbar.css">
     <link rel="stylesheet" href="../styles/load.css">
     <link rel="stylesheet" href="../styles/classes.css">
+    <link rel="stylesheet" href="../styles/compass.css">
     <script src="../scripts.js"></script>
 </head>
 
 <body onload="var x = window.location.href; parent.ResetButtons(x)">
+    <div class="compassBox" style="top: 120px;">
+        <div class="compass" style="transform: rotate(315deg);"><img src="../c.png"></div>
+    </div>
 
     <div class="header">
         <h1>"C" épület</h1>
@@ -20,29 +24,24 @@
 
     <div class="mainMap">
         <img src="./images/buildingC.png">
-        <div class="class classClickable" style="top: 75px; left: 348px; width: 250px; height: 120px;"
-            onclick="parent.ShowForm('Asimov terem', 'Asimov terem leírás')">
+        <div class="class classClickable" style="top: 75px; left: 348px; width: 250px; height: 120px;">
             <p>Asimov terem</p>
         </div>
-        <div class="class classClickable" style="top: 190px; left: 348px; width: 250px; height: 205px;"
-            onclick="parent.ShowForm('? terem', '? terem leírás')">
+        <div class="class classClickable" style="top: 190px; left: 348px; width: 250px; height: 205px;">
             <p>Ipari automatizálás / Folyamatirányító labor</p>
         </div>
-        <div class="class classClickable" style="top: 502px; left: 237px; width: 395px; height: 190px;"
-            onclick="parent.ShowForm('? terem', '? terem leírás')">
+        <div class="class classClickable" style="top: 502px; left: 237px; width: 395px; height: 190px;">
             <p>Palotai Tibor tanműhely</p>
         </div>
-        <div class="class classClickable classNone" style="top: 690px; left: 96px; width: 320px; height: 218px;"
-            onclick="parent.ShowForm('? terem', '? terem leírás')">
+        <div class="class classClickable classNone" style="top: 690px; left: 96px; width: 320px; height: 218px;">
             <p>? terem</p>
         </div>
-        <div class="class classClickable classNone" style="top: 690px; left: 410px; width: 222px; height: 510px;"
-            onclick="parent.ShowForm('? terem', '? terem leírás')">
+        <div class="class classClickable classNone" style="top: 690px; left: 410px; width: 222px; height: 510px;">
             <p>? terem</p>
         </div>
         <div class="place addExtraWidthToMarker" style="top: 975px; left: 245px; width: 110px; height: 97px;">
             <p style="background-color: #636363; color: rgb(223, 223, 223); border: 3px rgb(77, 77, 77) solid;">
-            <img src="../compressor.png">Kompresszorház</p>
+            <img src="../icons/compressor.png">Kompresszorház</p>
         </div>
     </div>
 

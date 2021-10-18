@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../mapStyles.css">
     <link rel="stylesheet" href="../styles/scrollbar.css">
     <link rel="stylesheet" href="../styles/load.css">
+    <link rel="stylesheet" href="../styles/classes.css">
     <script src="../scripts.js"></script>
 </head>
 <body onload="var x = window.location.href; parent.ResetButtons(x)">
@@ -14,24 +15,29 @@
   <h1>"E" épület</h1>
   <p>a focipályára néz</p>
 </div>
-
 <div class="mainMap">
-  <img src="../buildings/images/buildingE.png">
-        <div class="place" style="top: 100px; left: 100px; width: 100px; height: 100px; border: solid red 2px;">
-            <p><img src="../wcBlack.png">WC</p>
-        </div>
-        <div class="class" style="top: 200px; left: 100px; width: 100px; height: 100px;">
-            <p>Öveges terem</p>
-        </div>
-        <div class="class" style="top: 300px; left: 100px; width: 100px; height: 100px;">
-            <p>Gábor Dénes terem</p>
-        </div>
-        <div class="class" style="top: 400px; left: 100px; width: 100px; height: 100px;">
-            <p>Hardver-mérő terem</p>
-        </div>
-        <div class="class" style="top: 500px; left: 100px; width: 100px; height: 100px;">
-            <p>Szilárd terem</p>
-        </div>
+    <img src="../buildings/images/buildingE.png">
+    <div class="class classClickable" style="top: 145px; left: 111px; width: 480px; height: 316px;"
+        onclick="window.open('../documents/Oveges.pdf', '_blank').focus();">
+        <p>Öveges terem</p>
+    </div>
+    <div class="place" style="top: 461px; left: 250px; width: 180px; height: 50px;">
+        <p><img src="../icons/wcWomanBlack.png">Női WC</p>
+    </div>
+    <div class="place" style="top: 520px; left: 250px; width: 180px; height: 50px;">
+        <p><img src="../icons/wcManBlack.png">Férfi WC</p>
+    </div>
+    <div class="class classClickable" style="top: 572px; left: 111px; width: 480px; height: 344px;"
+        onclick="window.open('../documents/Szilard.pdf', '_blank').focus();">
+        <p>Szilárd terem</p>
+    </div>
+    <div class="class" style="top: 910px; left: 111px; width: 355px; height: 560px;">
+        <p>Hardver-mérő terem</p>
+    </div>
+    <div class="class classClickable" style="top: 1467px; left: 111px; width: 355px; height: 500px;"
+        onclick="window.open('../documents/GaborDenes.pdf', '_blank').focus();">
+        <p>Gábor Dénes terem</p>
+    </div>
 </div>
 
     <!--Anti select-->
@@ -62,6 +68,6 @@
 
           }
       </script>
-  </p>
+    </p>
 </body>
 </html>
