@@ -80,7 +80,7 @@
         document.getElementsByTagName("iframe")[0].onchange = ResetButtons(document.getElementsByTagName("iframe")[0].contentWindow.location.href)
     </script>
     <script>
-        function myFunction() {
+        function Search() {
             // Declare variables
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById('myInput');
@@ -192,12 +192,12 @@
                     </button>
                 </div>
             </div>
-            <div style="flex-grow : 1; display: flex; flex-flow: column;">
+            <div style="flex-grow: 1; display: flex; flex-flow: column; flex: 1;">
                 
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Terem keresése..."
+                <input type="text" id="myInput" onkeyup="Search()" placeholder="Terem keresése..."
                     onfocus="document.getElementById('sidebarButtons').classList.add('sideButtonsHidden')"
                     onblur="document.getElementById('sidebarButtons').classList.remove('sideButtonsHidden')">
-
+                
                 <ul id="SearchList">
                     <li>
                         <div class="sideListButton">

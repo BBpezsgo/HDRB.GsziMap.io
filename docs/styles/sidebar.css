@@ -24,7 +24,7 @@
   flex-direction: column;
   flex-shrink: 0;
 
-  flex:content;
+  flex: 100% - 10px;
 
   transition-delay: 1s;
   transition: flex 1s, opacity 500ms;
