@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu-hu" id="container">
 
 <head>
     <meta charset="utf-8">
@@ -15,6 +15,8 @@
 </head>
 
 <body>
+
+    <div style="top: 0px; left: 0px; bottom: 0px; right: 0px; box-shadow: inset #000 0px 0px 20px 3px; position:fixed;"></div>
 
     <div class="compassBox">
         <div class="compass" style="transform: rotate(15deg);"><img src="c.png"></div>
@@ -54,9 +56,8 @@
             <span class="tooltiptext">"E" épület</span>
         </div>
         <div class="place" id="buildinge" style="top: 449px; left: 400px; width: 157px; height: 90px;">
-            <p
-            style="background-color: #636363;color: rgb(223, 223, 223);border: 3px rgb(77, 77, 77) solid;"><img src="./icons/ball.png"
-                    style="position: relative; top: 1px;">Focipálya</p>
+            <p style="background-color: #636363;color: rgb(223, 223, 223);border: 3px rgb(77, 77, 77) solid;"><img
+                    src="./icons/ball.png" style="position: relative; top: 1px;">Focipálya</p>
         </div>
         <div class="building" style="top: 550px; left: 10px; width: 55px; height: 60px;">
             <span class="tooltiptext" style="left: 80%;">Porta,<br>Orvosi szoba</span>
@@ -100,6 +101,8 @@
             }
         </script>
     </p>
+    
+    <script src="drag-and-scroll.js"></script>
 </body>
 
 <script>

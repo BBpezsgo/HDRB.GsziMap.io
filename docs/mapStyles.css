@@ -120,3 +120,8 @@ html, body { height: 100% }
   visibility: visible;
   opacity: 1;
 }
+
+
+#container {
+  overflow: auto;
+}

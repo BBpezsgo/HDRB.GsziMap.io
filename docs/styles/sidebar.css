@@ -34,9 +34,9 @@
   overflow: hidden;
 }
 
-.sideButtonsHidden {
-  flex: 0;
-  opacity: 0%;
+.sideButtonsHidden>div.sideButton, .sideButtonsHidden>h2 {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .mobileMenuToggleButton {

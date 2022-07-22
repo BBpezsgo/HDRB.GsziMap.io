@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu-hu" id="container">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../mapStyles.css">
     <link rel="stylesheet" href="../styles/scrollbar.css">
-    <!--<link rel="stylesheet" href="../styles/load.css">-->
     <link rel="stylesheet" href="../styles/classes.css">
     <link rel="stylesheet" href="../styles/compass.css">
     <link rel="stylesheet" href="../styles/mapMarkers.css">
@@ -23,9 +22,8 @@
         <p>az főépület mögött</p>
     </div>
 
-
     <div class="mainMap">
-        <img src="./images/buildingD.png">
+        <img src="./images/buildingD.png" id="mapimage">
 
         <div class="class classNone" style="top: 50px; left: 265px; width: 496px; height: 235px;">
             <p>Tornaterem</p>
@@ -107,6 +105,8 @@
             }
         </script>
     </p>
+    
+    <script src="../drag-and-scroll.js"></script>
 </body>
 
 </html>

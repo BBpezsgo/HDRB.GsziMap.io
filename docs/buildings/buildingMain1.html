@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu-hu" id="container">
 
 <head>
     <meta charset="utf-8">
@@ -17,14 +17,13 @@
         <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
     </div>
 
-
     <div class="header">
         <h1>1. emelet</h1>
         <p>bejárat előtt a lépcsőn fel</p>
     </div>
 
     <div id="loadeffect" class="mainMap">
-        <img src="./images/buildingMain1.png">
+        <img src="./images/buildingMain1.png" id="mapimage">
         <div class="movement" style="top: 618px; left: 310px; width: 116px; height: 42px;"
             onclick="window.location.href = '../buildings/buildingMain0a.html'">
             <span class="tooltiptext">Le a földszintre</span>
@@ -103,6 +102,8 @@
             }
         </script>
     </p>
+    
+    <script src="../drag-and-scroll.js"></script>
 </body>
 
 </html>

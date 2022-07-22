@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu-hu" id="container">
 
 <head>
     <meta charset="utf-8">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="mainMap">
-        <img src="./images/buildingC.png">
+        <img src="./images/buildingC.png" id="mapimage">
         <div class="class classClickable" style="top: 78px; left: 348px; width: 250px; height: 117px;"
             onclick="window.open('../documents/Asimov.pdf', '_blank').focus();">
             <p>Asimov terem</p>
@@ -75,6 +75,8 @@
             }
         </script>
     </p>
+    
+    <script src="../drag-and-scroll.js"></script>
 </body>
 
 </html>

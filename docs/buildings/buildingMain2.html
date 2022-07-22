@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu-hu" id="container">
 
 <head>
     <meta charset="utf-8">
@@ -18,14 +18,13 @@
         <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
     </div>
 
-
     <div class="header">
         <h1>2. emelet</h1>
         <p>a lépcsőn még feljebb</p>
     </div>
 
     <div id="loadeffect" class="mainMap">
-        <img src="./images/buildingMain2.png">
+        <img src="./images/buildingMain2.png" id="mapimage">
         <div class="class classClickable" style="top: 35px; left: 285px; width: 206px; height: 216px;"
             onclick="window.open('../documents/Banki.pdf', '_blank').focus();">
             <p>Bánki terem</p>
@@ -112,6 +111,8 @@
             }
         </script>
     </p>
+    
+    <script src="../drag-and-scroll.js"></script>
 </body>
 
 </html>

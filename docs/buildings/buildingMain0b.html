@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu-hu" id="container">
 
 <head>
     <meta charset="utf-8">
@@ -17,14 +17,13 @@
         <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
     </div>
 
-
     <div class="header">
         <h1>Földszint - aula</h1>
         <p>bejáratnál jobbra, majd balra</p>
     </div>
 
     <div id="loadeffect" class="mainMap">
-        <img src="./images/building0b.png">
+        <img src="./images/building0b.png" id="mapimage">
         <div class="class classNone" style="top: 74px; left: 306px; width: 150px; height: 101px; transform: rotateZ(45deg);">
             <p>GDSZ</p>
         </div>
@@ -102,6 +101,8 @@
             }
         </script>
     </p>
+    
+    <script src="../drag-and-scroll.js"></script>
 </body>
 
 </html>
