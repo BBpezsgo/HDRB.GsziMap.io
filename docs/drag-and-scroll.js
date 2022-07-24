@@ -4,8 +4,6 @@ ele.style.cursor = 'grab';
 let pos = { top: 0, left: 0, x: 0, y: 0 };
 
 const mouseDownHandler = function (e) {
-    console.log('mouseDown ' + e.clientX + '-' + e.clientY)
-
     ele.style.cursor = 'grabbing';
     ele.style.userSelect = 'none';
 
@@ -22,8 +20,6 @@ const mouseDownHandler = function (e) {
 };
 
 const mouseMoveHandler = function (e) {
-    console.log('mouseMove ' + e.clientX + '-' + e.clientY)
-
     // How far the mouse has been moved
     const dx = e.clientX - pos.x;
     const dy = e.clientY - pos.y;
@@ -34,8 +30,6 @@ const mouseMoveHandler = function (e) {
 };
 
 const mouseUpHandler = function () {
-    console.log('mouseUp')
-
     ele.style.cursor = 'grab';
     ele.style.removeProperty('user-select');
 

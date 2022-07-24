@@ -21,7 +21,7 @@
     <div class="compassBox">
         <div class="compass" style="transform: rotate(15deg);"><img src="c.png"></div>
     </div>
-    <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5);">
+    <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5); z-index: 5;">
         <label class="switch right">
             <input type="checkbox" onclick="ChangeView()" id="checkbox" checked>
             <span class="slider round"></span>
@@ -32,7 +32,8 @@
     </div>
 
     <div class="main">
-        <img src="mainSatellite.jpg" id="mapimage">
+        <img src="mainSatellite.jpg" id="mapimage" style="z-index: -1;">
+        <img src="mainSatelliteOverlay.png" id="mapimage2" style="filter: blur(5px);position: absolute; top: 0; left: 0; opacity: .5; z-index: 0;">
 
         <div class="building" id="buildingmain" style="top: 340px; left: 45px; width: 180px; height: 200px;"
             onclick="window.location = 'buildings/buildingMain0a.html'">
@@ -103,14 +104,19 @@
     </p>
     
     <script src="drag-and-scroll.js"></script>
+    <script>
+        document.getElementById('mapimage2').ondragstart = function () { return false; };
+    </script>
 </body>
 
 <script>
     function ChangeView() {
         if (document.getElementById("checkbox").checked == true) {
             document.getElementById("mapimage").setAttribute("src", "mainSatellite.jpg")
+            document.getElementById("mapimage2").style.display = "block"
         } else {
             document.getElementById("mapimage").setAttribute("src", "mainSimple.png")
+            document.getElementById("mapimage2").style.display = "none"
         }
     }
 </script>
