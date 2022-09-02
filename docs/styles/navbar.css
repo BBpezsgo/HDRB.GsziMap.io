@@ -1,8 +1,12 @@
 .navbar {
     overflow: hidden;
     background-color: #333;
-    flex: 60px;
+    flex: 10px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: flex 500ms;
   }
+  
   
   .navbar a {
     float: left;
@@ -29,3 +33,17 @@
     background-color: #afafaf;
     color: black;
   }
+
+.mobileMenuToggleButton {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex: 60px;
+  }
+
+  .mobileMenuToggleButton {
+    visibility: visible;
+  }
+}

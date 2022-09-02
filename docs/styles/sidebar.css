@@ -1,5 +1,5 @@
 .sidebuttonGroup {
-  transition-duration: 750ms;
+  transition-duration: 350ms;
   height: 0px;
 
   width: 100%;
@@ -34,13 +34,13 @@
   overflow: hidden;
 }
 
-.sideButtonsHidden>div.sideButton, .sideButtonsHidden>h2 {
+.sideButtonsHidden>div.sideButton, .sideButtonsHidden>h2, .sideButtonsHidden>div.sidebuttonGroup {
   opacity: 0;
   pointer-events: none;
 }
 
-.mobileMenuToggleButton {
-  visibility: hidden;
+#sidebarButtons:not(.sideButtonsHidden) #SearchList {
+  display: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -49,9 +49,7 @@
     bottom: 0px;
     width: 100%;
   }
-  .mobileMenuToggleButton {
-    visibility: visible;
-  }
+
   .sideHidden {
     visibility: hidden;
 
@@ -89,7 +87,28 @@
   margin-left: 10%;
 }
 
-.sideButton button{
+.sideButton.sideCreatorsButton button{
+  padding: 0px 20px;
+  cursor: pointer;  width: 100%;
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: underline;
+  letter-spacing: .5px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  border: none;
+}
+
+.sideButton.sideCreatorsButton button:hover {
+  color: #000c;
+}
+
+.sideButton:not(.sideCreatorsButton) button{
   background-color: rgb(0 187 255);
   border: none;
   padding: 0px 20px;
@@ -110,18 +129,18 @@
   transition: all .35s;
 }
       
-    .sideButton button span{
+    .sideButton:not(.sideCreatorsButton) button span{
       position: relative;
       z-index: 2;
       overflow: hidden;
       transition-duration: 500ms;
       white-space: nowrap;
     }
-    .sideButton button:hover span{
+    .sideButton:not(.sideCreatorsButton) button:hover span{
         font-size: larger;
       }
       
-      .sideButton button:after{
+      .sideButton:not(.sideCreatorsButton) button:after{
         position: absolute;
         content: "";
         top: 0;
@@ -133,11 +152,11 @@
         opacity: .4;
       }
       
-      .sideButton button:hover:after{
+      .sideButton:not(.sideCreatorsButton) button:hover:after{
         width: 100%;
       }
       
-      .sideButton button:active:after{
+      .sideButton:not(.sideCreatorsButton) button:active:after{
         background-color: rgb(0 187 255);
       }
 
@@ -267,27 +286,26 @@
     }
 
 
-    .sidebarMainClose {
-      flex-shrink: 0;
-      margin-bottom: 10px;
-    }
+.sidebarMainClose {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
 
-    .sidebarMainCloseButton {
-      float: right;
-      background-color: #c9c9c9;
-      padding: 2px;
-      width: 36px;
-      height: 36px;
-      border-radius: 4px;
-      cursor: pointer;
+.sidebarMainCloseButton {
+  float: right;
+  padding: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .sidebarMainCloseButton:hover {
-  background-color: #b8b8b8;
+  filter: invert(30%);
 }
 
 .sidebarMainCloseButton:active {
-  background-color: #a5a5a5;
+  filter: invert(60%);
 }
 
 .sidebarMainCloseButton img {

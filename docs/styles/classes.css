@@ -75,7 +75,8 @@ html, body { height: 100% }
     transition-duration: .3s;
   }
   .class:hover p {
-    font-size:large;
+    font-size: large;
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3);
   }
   .classClickable:active {
     border-spacing: 50px;
@@ -187,7 +188,8 @@ html, body { height: 100% }
   transition-duration: .3s;
 }
 .movement:hover p {
-  font-size:large;
+  font-size: large;
+  box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3);
 }
 .movement:active {
   border-spacing: 50px;

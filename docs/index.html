@@ -14,98 +14,6 @@
     <link rel="icon" type="image/x-icon" href="https://www.nemesgszi.hu/components/images/favicon.png">
     <title>Az iskola térképe | Békéscsabai SZC Nemes Tihamér Technikum és Kollégium | GSZI |</title>
     <script src="scripts.js"></script>
-    <script type="text/javascript">
-        function showMainBuildingChilds() {
-            document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
-        }
-        function NavigateIframe(url) {
-            document.getElementsByTagName("iframe")[0].src = url;
-            ResetButtons(url)
-        }
-        function OnLoad() {
-            var url = window.location.href
-            if (url.includes('#')) {
-                var suburl = url.split('#')[1]
-                if (suburl === 'buildingMain') {
-                    NavigateIframe('buildings/buildingMain.html')
-                } else if (suburl === 'buildingB') {
-                    NavigateIframe('buildings/buildingB.html')
-                } else if (suburl === 'buildingC') {
-                    NavigateIframe('buildings/buildingC.html')
-                } else if (suburl === 'buildingD') {
-                    NavigateIframe('buildings/buildingD.html')
-                } else if (suburl === 'buildingE') {
-                    NavigateIframe('buildings/buildingE.html')
-                } else if (suburl === 'buildingMain.0a') {
-                    NavigateIframe('buildings/buildingMain0a.html')
-                } else if (suburl === 'buildingMain.0b') {
-                    NavigateIframe('buildings/buildingMain0b.html')
-                } else if (suburl === 'buildingMain.1') {
-                    NavigateIframe('buildings/buildingMain1.html')
-                } else if (suburl === 'buildingMain.2') {
-                    NavigateIframe('buildings/buildingMain2.html')
-                } else {
-                    //Suburl not found
-                }
-            } else {
-                //Simple navigate
-            }
-
-            
-            // Declare variables
-            var ul, li, i;
-            ul = document.getElementById("SearchList");
-            li = ul.getElementsByTagName('li');
-            
-            for (i = 0; i < li.length; i++) {
-                li[i].style.display = "none";
-            }
-        }
-        /**
-         * @param {string} title
-         * @param {string} context
-         */
-        function ShowForm(title, context) {
-            document.getElementById('CustomFormTitle').textContent = title
-            document.getElementById('CustomFormContext').textContent = context
-            document.getElementById('id02').style.display='block'
-        }
-        function ResetButtons(url) {
-            if (url.includes('buildingMain')) {
-                document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
-            } else {
-                document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
-            }
-        }
-        document.getElementsByTagName("iframe")[0].onchange = ResetButtons(document.getElementsByTagName("iframe")[0].contentWindow.location.href)
-    </script>
-    <script>
-        function Search() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('myInput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("SearchList");
-            li = ul.getElementsByTagName('li');
-
-            if (filter.length == 0) {
-                document.getElementById('SearchList').style.display='none';
-            } else {
-                document.getElementById('SearchList').style.display='block';
-            }
-            
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -120,9 +28,6 @@
     </div>
 
     <div class="navbar">
-        <a onclick="document.getElementById('id01').style.display='block'">
-            Készítők
-        </a>
         <a style="float: right;"
             onclick="document.getElementById('sidebar').classList.toggle('sideHidden')" class="mobileMenuToggleButton">
             <i class="fa fa-bars"></i>
@@ -141,258 +46,258 @@
                 <div style="flex-grow: 1; display: flex; flex-flow: column; flex: 1;">
                     
                     <input type="text" id="myInput" onkeyup="Search()" placeholder="Terem keresése..."
-                        onfocus="document.getElementById('sidebarButtons').classList.add('sideButtonsHidden')"
-                        onblur="document.getElementById('sidebarButtons').classList.remove('sideButtonsHidden')">
+                        onfocus="document.getElementById('sidebarButtons').classList.add('sideButtonsHidden'); Search()"
+                        onblur="document.getElementById('sidebarButtons').classList.remove('sideButtonsHidden');">
                     
                     <ul id="SearchList">
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Számítástechnika tanári</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Frey</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Neumann</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Nemes</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Kálmán</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Bábel</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Rendszergazdai szoba</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Széchenyi</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Könyvtár</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Arany</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Büfé</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>GDSZ</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0a.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0a.html')">
                                     <span>Vörös</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Tanügyi iroda</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Kós</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Bólyai</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Multimédia</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Jánossy</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Okt. techn.</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain1.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain1.html')">
                                     <span>Diákstúdió</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain0b.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain0b.html')">
                                     <span>Dialóg</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Tanári</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Igazgatóhelyettesi</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Igazgatói</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Titkárság</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Gazdasági iroda</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Pattantyús</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingMain2.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingMain2.html')">
                                     <span>Bánki</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('main.html')">
+                                <button onclick="NavigateIframeToClass('main.html')">
                                     <span>Porta</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingB.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingB.html')">
                                     <span>Gyakorlati oktatói szoba</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('main.html')">
+                                <button onclick="NavigateIframeToClass('main.html')">
                                     <span>Orvosi szoba</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingB.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingB.html')">
                                     <span>Fémipari műhely</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingB.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingB.html')">
                                     <span>Chomsky</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingB.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingB.html')">
                                     <span>Zorkóczy</span>
                                 </button>
                             </div>
                         </li>
     <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingD.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingD.html')">
                                     <span>CNC oktató</span>
                                 </button>
                             </div>
                         </li><!--
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <button onclick="NavigateIframeToClass('buildings/00000000.html')">
                                     <span>Mechanikai mérő</span>
                                 </button>
                             </div>
@@ -400,84 +305,84 @@
                         
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <button onclick="NavigateIframeToClass('buildings/00000000.html')">
                                     <span>Forgácsoló műhely</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <button onclick="NavigateIframeToClass('buildings/00000000.html')">
                                     <span>Asztalos műhely</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/00000000.html')">
+                                <button onclick="NavigateIframeToClass('buildings/00000000.html')">
                                     <span>Épületgépészeti műhely</span>
                                 </button>
                             </div>
                         </li>-->
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingD.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingD.html')">
                                     <span>Tornaterem</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingD.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingD.html')">
                                     <span>Pascal</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingD.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingD.html')">
                                     <span>Turbo</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingD.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingD.html')">
                                     <span>Kempelen</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingD.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingD.html')">
                                     <span>Bay</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingE.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingE.html')">
                                     <span>Gábor Dénes</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingE.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingE.html')">
                                     <span>Hardver-mérő</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingE.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingE.html')">
                                     <span>Öveges</span>
                                 </button>
                             </div>
                         </li>
                         <li>
                             <div class="sideListButton">
-                                <button onclick="NavigateIframe('buildings/buildingE.html')">
+                                <button onclick="NavigateIframeToClass('buildings/buildingE.html')">
                                     <span>Szilárd</span>
                                 </button>
                             </div>
@@ -538,6 +443,11 @@
                         <span>"E" Épület</span>
                     </button>
                 </div>
+                <div class="sideButton sideCreatorsButton">
+                    <button onclick="document.getElementById('id01').style.display='block'">
+                        <span>Készítők</span>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="main">
@@ -546,27 +456,30 @@
     </div>
 
 
-    <!--Form Creators-->
+    <!-- Form Creators -->
     <div id="id01" class="modal">
         <div class="modal-content animate">
             <div class="imgcontainer">
-                Készítők
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezár">
                 </span>
             </div>
 
             <div class="container" style="font-size: 20px;">
+                <h3>Készítők <span style="opacity: .5;">(11.C)</span></h3>
                 <ul>
                     <li>Gombkötő Dávid</li>
-                    <li> Dudás René</li>
-                    <li> Baukó Hunor</li>
-                    <li> Bánszky Balázs</li>
+                    <li>Dudás René</li>
+                    <li>Baukó Hunor</li>
+                    <li>Bánszky Balázs</li>
                 </ul>
+                <p style="font-size: .9em; opacity: .7;">
+                    9-ben csináltuk
+                </p>
             </div>
         </div>
     </div>
 
-    <!--Anti select-->
+    <!-- Anti select -->
     <p style="position:absolute; top: 0;">
         <script type="text/javascript">
             //form tags to omit in NS6+:
@@ -596,12 +509,110 @@
         </script>
     </p>
 </body>
+
 <script>
     var modal = document.getElementById('id01');
 
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    const classSearchInput = document.getElementById('myInput')
+
+    function showMainBuildingChilds() {
+        document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
+    }
+    
+    function NavigateIframe(url) {
+        document.getElementsByTagName("iframe")[0].src = url;
+        ResetButtons(url)
+        document.getElementById('sidebar').classList.add('sideHidden')
+    }
+
+    function NavigateIframeToClass(url) {
+        NavigateIframe(url)
+        SearchName('')
+    }
+    
+    function OnLoad() {
+        var url = window.location.href
+        if (url.includes('#')) {
+            var suburl = url.split('#')[1]
+            if (suburl === 'buildingMain') {
+                NavigateIframe('buildings/buildingMain.html')
+            } else if (suburl === 'buildingB') {
+                NavigateIframe('buildings/buildingB.html')
+            } else if (suburl === 'buildingC') {
+                NavigateIframe('buildings/buildingC.html')
+            } else if (suburl === 'buildingD') {
+                NavigateIframe('buildings/buildingD.html')
+            } else if (suburl === 'buildingE') {
+                NavigateIframe('buildings/buildingE.html')
+            } else if (suburl === 'buildingMain.0a') {
+                NavigateIframe('buildings/buildingMain0a.html')
+            } else if (suburl === 'buildingMain.0b') {
+                NavigateIframe('buildings/buildingMain0b.html')
+            } else if (suburl === 'buildingMain.1') {
+                NavigateIframe('buildings/buildingMain1.html')
+            } else if (suburl === 'buildingMain.2') {
+                NavigateIframe('buildings/buildingMain2.html')
+            } else {
+                //Suburl not found
+            }
+        } else {
+            //Simple navigate
+        }
+
+        
+        const ul = document.getElementById("SearchList")
+        const li = ul.getElementsByTagName('li')        
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.display = "none"
+        }
+    }
+    
+    function ShowForm(title, context) {
+        document.getElementById('CustomFormTitle').textContent = title
+        document.getElementById('CustomFormContext').textContent = context
+        document.getElementById('id02').style.display='block'
+    }
+    
+    function ResetButtons(url) {
+        if (url.includes('buildingMain')) {
+            document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
+        } else {
+            document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
+        }
+    }
+  
+    document.getElementsByTagName("iframe")[0].onchange = ResetButtons(document.getElementsByTagName("iframe")[0].contentWindow.location.href)
+
+    function Search() {
+        SearchName(classSearchInput.value.toUpperCase())
+    }
+
+    function SearchName(className) {
+        const ul = document.getElementById("SearchList")
+        const li = ul.getElementsByTagName('li')
+
+        if (className.length == 0) {
+            document.getElementById('SearchList').style.display = 'none'
+        } else {
+            document.getElementById('SearchList').style.display = 'block'
+        }
+        
+        for (var i = 0; i < li.length; i++) {
+            const a = li[i]
+            const txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(className) > -1) {
+                li[i].style.display = ""
+            } else {
+                li[i].style.display = "none"
+            }
         }
     }
 </script>
