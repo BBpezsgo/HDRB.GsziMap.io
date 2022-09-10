@@ -39,3 +39,42 @@ body {
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+textarea {
+  border: 1px solid #0006;
+  font-size: large;
+  border-radius: 3px;
+  padding: 5px;
+  outline: none;
+  transition: box-shadow 200ms;
+  width: 100%;
+}
+
+textarea:focus {
+  border: 1px solid #0006;
+  outline: none;
+  box-shadow: #0006 0px 0px 3px 1px;
+}
+
+input[type=submit] {
+  border-radius: 3px;
+  background-color: #e4e4e4;
+  outline: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  min-width: 100px;
+  transition: background-color 200ms, box-shadow 200ms;
+  margin-bottom: 10px;
+}
+
+input[type=submit]:hover {
+  background-color: #cacaca;
+  box-shadow: #0006 0px 0px 5px;
+}
+
+input[type=submit]:active {
+  background-color: #b1b1b1;
+  transition: background-color 100ms, box-shadow 10ms;
+  box-shadow: #0006 0px 0px 3px;
+}
