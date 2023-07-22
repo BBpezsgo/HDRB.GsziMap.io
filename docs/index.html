@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu-hu">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/d70969805a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body onload="OnLoad()">
@@ -23,8 +24,7 @@
     <div class="header" style="z-index: -1;">
         <div class="headerfade" style="z-index: -1;"></div>
         <div>
-            <h1 id="TitleText">Békéscsabai SZC Nemes Tihamér Technikum és Kollégium</h1>
-            <p style="bottom: 10px; position: relative;">Térkép</p>
+            <h1>Békéscsabai SZC Nemes Tihamér Technikum és Kollégium<span>Térkép</span></h1>
         </div>
     </div>
 
@@ -592,11 +592,15 @@
 </script>
 
 <script>
-    var modal = document.getElementById('id01');
+    var modal1 = document.getElementById('id01');
+    var modal2 = document.getElementById('id02');
 
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        } else if (event.target == modal2) {
+            FeedbackGoBack();
+            modal2.style.display = "none";
         }
     }
 </script>
