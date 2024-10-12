@@ -1,40 +1,21 @@
-.sidebuttonGroup {
-  transition-duration: 350ms;
-  height: 0px;
-
-  width: 100%;
-}
-
 .side {
-  -ms-flex: 10%; /* IE10 */
+  -ms-flex: 10%;
   flex: 10%;
   background-color: #f1f1f1;
-  padding: 20px;
-  
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  padding: 10px 0px 10px 10px;
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 
   display: flex;
   flex-flow: column;
   height: 100%;
+  overflow-y: scroll;
 }
 
-.sidebarButtons {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-
-  flex: 100% - 10px;
-
-  transition-delay: 1s;
-  transition: flex 1s, opacity 500ms;
-
-  opacity: 100%;
-
-  overflow: hidden;
-}
-
-.sideButtonsHidden>div.sideButton, .sideButtonsHidden>h2, .sideButtonsHidden>div.sidebuttonGroup {
+.sideButtonsHidden>button,
+.sideButtonsHidden>h2,
+.sideButtonsHidden>.sidebuttonGroup {
   opacity: 0;
   pointer-events: none;
 }
@@ -54,7 +35,7 @@
     visibility: hidden;
 
     -ms-flex: 0%;
-    flex: 0%;  
+    flex: 0%;
     display: none;
     flex-direction: unset;
   }
@@ -67,121 +48,84 @@
   }
 }
 
-
-.sideButton {
-    width: 100%;
-    border: none;
-    border-radius: 4px;
-    margin: 5px 0;
-    opacity: 0.85;
-    display: inline-block;
-    font-size: 17px;
-    line-height: 20px;
-    text-decoration: none;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.2s;
+.sidebuttonGroup {
+  height: 0px;
 }
 
-.sidebuttonGroup .sideButton {
-  width: 90%;
-  margin-left: 10%;
+#SearchList > li > div > button {
+  width: calc(100% - 16px);
 }
 
-.sideButton.sideCreatorsButton button{
-  padding: 0px 20px;
-  cursor: pointer;  width: 100%;
+.sidebuttonGroup button {
   display: block;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: underline;
-  letter-spacing: .5px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-  border: none;
+  width: calc(100% - 16px);
 }
 
-.sideButton.sideCreatorsButton button:hover {
-  color: #000c;
+.sidebarButtons {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex: 100% - 10px;
+  opacity: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-.sideButton:not(.sideCreatorsButton) button{
-  background-color: rgb(0 187 255);
+.sidebarButtons button {
+  margin: 5px 0;
   border: none;
+  white-space: nowrap;
   padding: 0px 20px;
-  display: inline-block; 
-  cursor: pointer;  width: 100%;
-  transition-duration: 0.2s;
+  cursor: pointer;
   display: block;
-  width: 100%;
   height: 40px;
-  line-height: 40px;
   font-size: 18px;
-  font-family: sans-serif;
+  font-weight: bold;
   text-decoration: none;
-  color: white;
-  letter-spacing: .5px;
+  color: #000000;
   text-align: center;
   position: relative;
-  transition: all .35s;
 }
-      
-    .sideButton:not(.sideCreatorsButton) button span{
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-      transition-duration: 500ms;
-      white-space: nowrap;
-    }
-    .sideButton:not(.sideCreatorsButton) button:hover span{
-        font-size: larger;
-      }
-      
-      .sideButton:not(.sideCreatorsButton) button:after{
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: white;
-        transition: all .35s;
-        opacity: .4;
-      }
-      
-      .sideButton:not(.sideCreatorsButton) button:hover:after{
-        width: 100%;
-      }
-      
-      .sideButton:not(.sideCreatorsButton) button:active:after{
-        background-color: rgb(0 187 255);
-      }
 
-#myInput:focus {
-    outline: none;
-    border: 2px gray solid;
+.sidebarButtons button.sideCreatorsButton {
+  border: none;
+}
+
+.sidebarButtons button:not(.sideCreatorsButton) {
+  margin: 8px;
+  background-color: #ffffff;
+  border: 4px solid #00bbff;
+}
+
+.sidebarButtons button:not(.sideCreatorsButton):hover {
+  transform: translate(-4px, -4px);
+  box-shadow:
+    1px 1px 0px #00bbff,
+    2px 2px 0px #00bbff,
+    3px 3px 0px #00bbff,
+    4px 4px 0px #00bbff;
+}
+
+.sidebarButtons button:not(.sideCreatorsButton):active {
+  border: 4px solid #000000;
+  box-shadow: none;
+  transform: none;
 }
 
 #myInput {
-  border-radius: 4px;
-  margin: 5px 0;
-  
-  background-color: rgb(255, 255, 255);
-  border: none;
+  margin: 8px;
+  background-color: #ffffff;
+  border: 4px solid #888888;
   padding: 0px 20px;
-  transition-duration: 0.5s;
-  width: 100%;
   height: 40px;
   font-size: 18px;
-  font-family: sans-serif;
-  color: rgb(148, 148, 148);
-  letter-spacing: .5px;
-  border: 2px transparent solid;
-
+  color: #000000;
   flex-shrink: 0;
+}
+
+#myInput:focus {
+  outline: none;
+  border: 4px #00bbff solid;
 }
 
 #SearchList {
@@ -189,102 +133,35 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  flex-grow : 1;
+  flex-grow: 1;
   overflow-y: visible;
 }
 
-#myInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(138, 138, 138);
-  opacity: 1; /* Firefox */
-  transition-duration: 0.5s;
-}
-#myInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgb(138, 138, 138);
-  transition-duration: 0.5s;
-}
-#myInput::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgb(138, 138, 138);
-  transition-duration: 0.5s;
+#myInput::placeholder {
+  color: #8a8a8a;
+  opacity: 1;
 }
 
-#myInput:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(211, 211, 211);
-  opacity: 1; /* Firefox */
+#myInput:-ms-input-placeholder {
+  color: rgb(138, 138, 138);
 }
-#myInput:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgb(211, 211, 211);
+
+#myInput::-ms-input-placeholder {
+  color: rgb(138, 138, 138);
 }
-#myInput:focus::-ms-input-placeholder { /* Microsoft Edge */
+
+#myInput:focus::placeholder {
+  color: rgb(211, 211, 211);
+  opacity: 1;
+}
+
+#myInput:focus:-ms-input-placeholder {
   color: rgb(211, 211, 211);
 }
 
-
-.sideListButton {
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
-  text-decoration: none;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.2s;
+#myInput:focus::-ms-input-placeholder {
+  color: rgb(211, 211, 211);
 }
-
-.sideListButton button{
-  background-color: rgb(0 187 255);
-  border: none;
-  padding: 0px 20px;
-  display: inline-block; 
-  cursor: pointer;  width: 100%;
-  transition-duration: 0.2s;
-  display: block;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: white;
-  letter-spacing: .5px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-}
-    
-  .sideListButton button span{
-    position: relative;
-    z-index: 2;
-    transition-duration: 500ms;
-    white-space: nowrap;
-    width: 100%;
-  }
-  .sideListButton button:hover span{
-      font-size: larger;
-    }
-    
-    .sideListButton button:after{
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: white;
-      transition: all .35s;
-      opacity: .4;
-    }
-    
-    .sideListButton button:hover:after{
-      width: 100%;
-    }
-    
-    .sideListButton button:active:after{
-      background-color: rgb(0 187 255);
-    }
-
 
 .sidebarMainClose {
   flex-shrink: 0;
@@ -296,7 +173,6 @@
   padding: 2px;
   width: 36px;
   height: 36px;
-  border-radius: 4px;
   cursor: pointer;
 }
 

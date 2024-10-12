@@ -52,76 +52,51 @@
                     <ul id="SearchList"></ul>
                 </div>
                 
-                <div class="sideButton">
-                    <button onclick="navigateIframe('main.html')">
-                        <span>Főtérkép</span>
-                    </button>
-                </div>
+                <button class="sideButton" onclick="navigateIframe('main.html')">
+                    Főtérkép
+                </button>
                 <h2>Épületek</h2>
-                <div class="sideButton">
-                    <button onclick="navigateIframe('buildings/buildingMain0a.html')">
-                        <span>Főépület</span>
-                    </button>
-                </div>
+                <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0a.html')">
+                    Főépület
+                </button>
                 <div id="sideButtonGroupMainbuilding" class="sidebuttonGroup" style="height: 0px;">
-                    <div class="sideButton">
-                        <button onclick="navigateIframe('buildings/buildingMain0a.html')">
-                            <span>Földszint</span>
-                        </button>
-                    </div>
-                    <div class="sideButton">
-                        <button onclick="navigateIframe('buildings/buildingMain0b.html')">
-                            <span>Földszint - aula</span>
-                        </button>
-                    </div>
-                    <div class="sideButton">
-                        <button onclick="navigateIframe('buildings/buildingMain1.html')">
-                            <span>1. emelet</span>
-                        </button>
-                    </div>
-                    <div class="sideButton">
-                        <button onclick="navigateIframe('buildings/buildingMain2.html')">
-                            <span>2. emelet</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="sideButton">
-                    <button onclick="navigateIframe('buildings/buildingB.html')">
-                        <span>"B" Épület</span>
+                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0a.html')">
+                        Földszint
+                    </button>
+                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0b.html')">
+                        Földszint - aula
+                    </button>
+                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain1.html')">
+                        1. emelet
+                    </button>
+                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain2.html')">
+                        2. emelet
                     </button>
                 </div>
-                <div class="sideButton">
-                    <button onclick="navigateIframe('buildings/buildingC.html')">
-                        <span>"C" Épület</span>
-                    </button>
-                </div>
-                <div class="sideButton">
-                    <button onclick="navigateIframe('buildings/buildingD.html')">
-                        <span>"D" Épület</span>
-                    </button>
-                </div>
-                <div class="sideButton">
-                    <button onclick="navigateIframe('buildings/buildingE.html')">
-                        <span>"E" Épület</span>
-                    </button>
-                </div>
-                <div class="sideButton sideCreatorsButton">
-                    <button onclick="document.getElementById('modal-creators').style.display='block'">
-                        <span>Készítők</span>
-                    </button>
-                </div>
-                <div class="sideButton sideCreatorsButton">
-                    <button onclick="document.getElementById('modal-feedback').style.display='block'">
-                        <span>Visszajelzés</span>
-                    </button>
-                </div>
+                <button class="sideButton" onclick="navigateIframe('buildings/buildingB.html')">
+                    "B" Épület
+                </button>
+                <button class="sideButton" onclick="navigateIframe('buildings/buildingC.html')">
+                    "C" Épület
+                </button>
+                <button class="sideButton" onclick="navigateIframe('buildings/buildingD.html')">
+                    "D" Épület
+                </button>
+                <button class="sideButton" onclick="navigateIframe('buildings/buildingE.html')">
+                    "E" Épület
+                </button>
+                <button class="sideButton sideCreatorsButton" onclick="document.getElementById('modal-creators').style.display='block'">
+                    Készítők
+                </button>
+                <button class="sideButton sideCreatorsButton" onclick="document.getElementById('modal-feedback').style.display='block'">
+                    Visszajelzés
+                </button>
             </div>
         </div>
         <div class="main">
             <iframe src="main.html"></iframe>
         </div>
     </div>
-
 
     <!-- Form Creators -->
     <div id="modal-creators" class="modal">
@@ -131,17 +106,24 @@
             </div>
 
             <div class="container" style="font-size: 20px;">
-                <h3>Készítők <span style="opacity: .5;">(12.C)</span></h3>
+                <h3>Készítők <span style="opacity: .5;">(13.C)</span></h3>
+                <h4>Dokumentumok</h3>
                 <ul>
                     <li>Gombkötő Dávid</li>
                     <li>Dudás René</li>
                     <li>Baukó Hunor</li>
+                </ul>
+                <h4>Weboldal</h3>
+                <ul>
                     <li>Bánszky Balázs</li>
                 </ul>
+                <h4>Ikonok</h3>
+                <ul>
+                    <li><a target="_blank" href="https://icons8.com">Icons8</a></li>
+                </ul>
                 <p style="font-size: .9em; opacity: .7;">
-                    9-ben csináltuk
+                    9-ben készítettük
                 </p>
-                Icons by <a target="_blank" href="https://icons8.com">Icons8</a>
             </div>
         </div>
     </div>
@@ -163,6 +145,9 @@
                         <div class="mb-3 mt-3">
                             <textarea required maxlength="1024" id="feedback-form-desc" name="desc" placeholder="Visszajelzés szövege"></textarea>
                         </div>
+                        <p style="font-size: 0.7em;">
+                            Az üzenet a Trello-ra lesz feltöltve és Bánszky Balázs fog foglalkozni vele.
+                        </p>
                         <input class="btn btn-primary" type="submit" value="Feltölt">
                     </form>
                 </div>
