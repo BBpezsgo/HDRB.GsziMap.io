@@ -359,3 +359,7 @@ html, body { height: 100% }
   visibility: visible;
   opacity: 1;
 }
+
+.selected {
+  border: 3px solid #ffe600 !important;
+}

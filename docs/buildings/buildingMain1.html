@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="../styles/classes.css">
     <link rel="stylesheet" href="../styles/compass.css">
     <link rel="stylesheet" href="../styles/objects.css">
-    <script src="../scripts.js"></script>
 </head>
 
-<body onload="var x = window.location.href; parent.ResetButtons(x)">
+<body onload="var x = window.location.href; parent.resetButtons(x)">
     <div class="compassBox" style="top: 120px;">
         <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
     </div>
@@ -44,7 +43,7 @@
             <span class="tooltiptext">Le az aulába...</span>
             <p><img src="../icons/stairsDown.png">Csigalépcső</p>
         </div>
-        <div class="class classClickable" style="top: 28px; left: 285px; width: 380px; height: 175px;"
+        <div class="class classClickable" id="janossy" style="top: 28px; left: 285px; width: 380px; height: 175px;"
             onclick="window.open('../documents/Janossy.pdf', '_blank').focus();">
             <p>Jánossy terem</p>
         </div>
@@ -62,54 +61,25 @@
         <div class="class" style="top: 197px; left: 490px; width: 178px; height: 161px;">
             <p>Multimédia</p>
         </div>
-        <div class="class classClickable" style="top: 354px; left: 490px; width: 154px; height: 255px;"
+        <div class="class classClickable" id="bolyai" style="top: 354px; left: 490px; width: 154px; height: 255px;"
             onclick="window.open('../documents/Bolyai.pdf', '_blank').focus();">
             <p>Bólyai terem</p>
         </div>
         <div class="class classNone" style="top: 605px; left: 525px; width: 120px; height: 100px;">
             <p>Tanügyi iroda</p>
         </div>
-        <div class="class classClickable" style="top: 700px; left: 310px; width: 170px; height: 260px;"
+        <div class="class classClickable" id="voros" style="top: 700px; left: 310px; width: 170px; height: 260px;"
         onclick="window.open('../documents/Voros.pdf', '_blank').focus();">
             <p>Vörös terem</p>
         </div>
-        <div class="class classClickable" style="top: 700px; left: 475px; width: 170px; height: 260px;"
+        <div class="class classClickable" id="kos" style="top: 700px; left: 475px; width: 170px; height: 260px;"
             onclick="window.open('../documents/Kos.pdf', '_blank').focus();">
             <p>Kós terem</p>
         </div>
     </div>
 
-    <!--Anti select-->
-    <p style="position:absolute; top: 0;">
-        <script type="text/javascript">
-            //form tags to omit in NS6+:
-            var omitformtags = ["input", "textarea", "select"]
-            omitformtags = omitformtags.join("|")
-            function disableselect(e) {
-                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
-                    return false
-            }
-            function reEnable() {
-                return true
-            }
-            if (typeof document.onselectstart != "undefined")
-                document.onselectstart = new Function("return false")
-            else {
-                document.onmousedown = disableselect
-                document.onmouseup = reEnable
-            }
-        </script>
-        <script type="text/javascript">
-            try {
-                var pageTracker = _gat._getTracker("UA-549331-28");
-                pageTracker._trackPageview();
-            } catch (err) {
-
-            }
-        </script>
-    </p>
-    
     <script src="../drag-and-scroll.js"></script>
+    <script src="../iframe.js"></script>
 </body>
 
 </html>

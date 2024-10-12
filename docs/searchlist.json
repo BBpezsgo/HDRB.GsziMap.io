@@ -1,0 +1,201 @@
+[
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Számítástechnika tanári"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Frey",
+        "id": "frey"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Neumann",
+        "id": "neumann"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Nemes",
+        "id": "nemes"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Kalmár",
+        "id": "kalmar"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Bábel",
+        "id": "babel"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Rendszergazdai szoba"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Széchenyi",
+        "id": "szechenyi"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Könyvtár"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Arany",
+        "id": "arany"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Büfé"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "GDSZ"
+    },
+    {
+        "building": "buildings/buildingMain0a.html",
+        "name": "Vörös",
+        "id": "voros"
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Tanügyi iroda"
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Kós",
+        "id": "kos"
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Bólyai",
+        "id": "bolyai"
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Multimédia"
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Jánossy",
+        "id": "janossy"
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Okt. techn."
+    },
+    {
+        "building": "buildings/buildingMain1.html",
+        "name": "Diákstúdió"
+    },
+    {
+        "building": "buildings/buildingMain0b.html",
+        "name": "Dialóg",
+        "id": "dialog"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Tanári"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Igazgatóhelyettesi"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Igazgatói"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Titkárság"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Gazdasági iroda"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Pattantyús",
+        "id": "pattantyus"
+    },
+    {
+        "building": "buildings/buildingMain2.html",
+        "name": "Bánki",
+        "id": "banki"
+    },
+    {
+        "building": "main.html",
+        "name": "Porta"
+    },
+    {
+        "building": "buildings/buildingB.html",
+        "name": "Gyakorlati oktatói szoba"
+    },
+    {
+        "building": "main.html",
+        "name": "Orvosi szoba"
+    },
+    {
+        "building": "buildings/buildingB.html",
+        "name": "Fémipari műhely"
+    },
+    {
+        "building": "buildings/buildingB.html",
+        "name": "Chomsky",
+        "id": "chomsky"
+    },
+    {
+        "building": "buildings/buildingB.html",
+        "name": "Zorkóczy",
+        "id": "zorkoczy"
+    },
+    {
+        "building": "buildings/buildingD.html",
+        "name": "CNC oktató"
+    },
+    {
+        "building": "buildings/buildingD.html",
+        "name": "Tornaterem"
+    },
+    {
+        "building": "buildings/buildingD.html",
+        "name": "Pascal",
+        "id": "pascal"
+    },
+    {
+        "building": "buildings/buildingD.html",
+        "name": "Turbo",
+        "id": "turbo"
+    },
+    {
+        "building": "buildings/buildingD.html",
+        "name": "Kempelen",
+        "id": "kempelen"
+    },
+    {
+        "building": "buildings/buildingD.html",
+        "name": "Bay",
+        "id": "bay"
+    },
+    {
+        "building": "buildings/buildingE.html",
+        "name": "Gábor Dénes",
+        "id": "gabor-denes"
+    },
+    {
+        "building": "buildings/buildingE.html",
+        "name": "Hardver-mérő"
+    },
+    {
+        "building": "buildings/buildingE.html",
+        "name": "Öveges",
+        "id": "oveges"
+    },
+    {
+        "building": "buildings/buildingE.html",
+        "name": "Szilárd",
+        "id": "szilard"
+    }
+]

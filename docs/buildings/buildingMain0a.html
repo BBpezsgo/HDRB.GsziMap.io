@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="../styles/load.css">
     <link rel="stylesheet" href="../styles/classes.css">
     <link rel="stylesheet" href="../styles/compass.css">
-    <script src="../scripts.js"></script>
 </head>
 
-<body onload="var x = window.location.href; parent.ResetButtons(x)">
+<body onload="var x = window.location.href; parent.resetButtons(x)">
     <div class="compassBox" style="top: 120px;">
         <div class="compass" style="transform: rotate(285deg);"><img src="../c.png"></div>
     </div>
@@ -24,18 +23,18 @@
 
     <div id="loadeffect" class="mainMap">
         <img src="./images/buildingMain0a.png" id="mapimage">
-        <div class="class" style="top: 38px; left: 319px; width: 156px; height: 174px;">
+        <div class="class" id="babel" style="top: 38px; left: 319px; width: 156px; height: 174px;">
             <p>Bábel terem</p>
         </div> <!--No PDF-->
-        <div class="class classClickable" style="top: 38px; left: 468px; width: 217px; height: 174px;"
+        <div class="class classClickable" id="kalmar" style="top: 38px; left: 468px; width: 217px; height: 174px;"
             onclick="window.open('../documents/Kalmar.pdf', '_blank').focus();">
             <p><img src="../icons/computer.png">Kalmár terem</p>
         </div>
-        <div class="class classClickable" style="top: 205px; left: 500px; width: 184px; height: 159px;"
+        <div class="class classClickable" id="nemes" style="top: 205px; left: 500px; width: 184px; height: 159px;"
         onclick="window.open('../documents/Nemes.pdf', '_blank').focus();">
             <p><img src="../icons/computer.png">Nemes terem</p>
         </div>
-        <div class="class classClickable" style="top: 360px; left: 500px; width: 154px; height: 260px;"
+        <div class="class classClickable" id="neumann" style="top: 360px; left: 500px; width: 154px; height: 260px;"
             onclick="window.open('../documents/Neumann.pdf', '_blank').focus();">
             <p><img src="../icons/computer.png">Neumann terem</p>
         </div>
@@ -47,7 +46,7 @@
         <div class="class classNone" style="top: 700px; left: 500px; width: 154px; height: 90px;">
             <p>Számte. tanári</p>
         </div>
-        <div class="class classClickable" style="top: 700px; left: 356px; width: 154px; height: 240px;"
+        <div class="class classClickable" id="frey" style="top: 700px; left: 356px; width: 154px; height: 240px;"
             onclick="window.open('../documents/Frey.pdf', '_blank').focus();">
             <p><img src="../icons/computer.png">Frey terem</p>
         </div>
@@ -83,37 +82,8 @@
         </div>
     </div>
 
-    <!--Anti select-->
-    <p style="position:absolute; top: 0;">
-        <script type="text/javascript">
-            //form tags to omit in NS6+:
-            var omitformtags = ["input", "textarea", "select"]
-            omitformtags = omitformtags.join("|")
-            function disableselect(e) {
-                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
-                    return false
-            }
-            function reEnable() {
-                return true
-            }
-            if (typeof document.onselectstart != "undefined")
-                document.onselectstart = new Function("return false")
-            else {
-                document.onmousedown = disableselect
-                document.onmouseup = reEnable
-            }
-        </script>
-        <script type="text/javascript">
-            try {
-                var pageTracker = _gat._getTracker("UA-549331-28");
-                pageTracker._trackPageview();
-            } catch (err) {
-
-            }
-        </script>
-    </p>
-    
     <script src="../drag-and-scroll.js"></script>
+    <script src="../iframe.js"></script>
 </body>
 
 </html>

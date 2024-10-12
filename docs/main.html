@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="./styles/compass.css">
     <link rel="stylesheet" href="./styles/mapMarkers.css">
     <link rel="stylesheet" href="./styles/classes.css">
-    <script src="scripts.js"></script>
 </head>
 
-<body>
+<body style="background-color: #313131;">
 
     <div style="top: 0px; left: 0px; bottom: 0px; right: 0px; box-shadow: inset #000 0px 0px 20px 3px; position:fixed;"></div>
 
@@ -23,7 +22,7 @@
     </div>
     <div style="position: fixed; top: 10px; right: 10px; background-color: rgba(0,0,0,0.5); z-index: 5;">
         <label class="switch right">
-            <input type="checkbox" onclick="ChangeView()" id="checkbox" checked>
+            <input type="checkbox" onclick="ChangeView()" id="checkbox">
             <span class="slider round"></span>
         </label>
         <div class="label" style="color: white;">
@@ -73,40 +72,11 @@
         </div>
     </div>
 
-    <!--Anti select-->
-    <p style="position:absolute; top: 0;">
-        <script type="text/javascript">
-            //form tags to omit in NS6+:
-            var omitformtags = ["input", "textarea", "select"]
-            omitformtags = omitformtags.join("|")
-            function disableselect(e) {
-                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
-                    return false
-            }
-            function reEnable() {
-                return true
-            }
-            if (typeof document.onselectstart != "undefined")
-                document.onselectstart = new Function("return false")
-            else {
-                document.onmousedown = disableselect
-                document.onmouseup = reEnable
-            }
-        </script>
-        <script type="text/javascript">
-            try {
-                var pageTracker = _gat._getTracker("UA-549331-28");
-                pageTracker._trackPageview();
-            } catch (err) {
-
-            }
-        </script>
-    </p>
-    
     <script src="drag-and-scroll.js"></script>
     <script>
         document.getElementById('mapimage2').ondragstart = function () { return false; };
     </script>
+    <!--<script src="test.js"></script>-->
 </body>
 
 <script>
@@ -119,6 +89,7 @@
             document.getElementById("mapimage2").style.display = "none"
         }
     }
+    ChangeView()
 </script>
 
 </html>
