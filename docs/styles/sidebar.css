@@ -85,6 +85,7 @@
   color: #000000;
   text-align: center;
   position: relative;
+  text-overflow: ellipsis;
 }
 
 .sidebarButtons button.sideCreatorsButton {
