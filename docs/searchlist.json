@@ -138,6 +138,11 @@
         "name": "Orvosi szoba"
     },
     {
+        "building": "buildings/buildingC.html",
+        "name": "Maczik Mihály András",
+        "id": "maczik-mihaly-andras"
+    },
+    {
         "building": "buildings/buildingB.html",
         "name": "Fémipari műhely"
     },
