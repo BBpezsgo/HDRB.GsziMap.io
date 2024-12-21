@@ -25,8 +25,8 @@
         right: 4px;
         z-index: 999;
         color: #0090C5
-        " href="./3d.html">
-        3D
+        " href="./index.html">
+        2D
     </a>
 
     <div class="header" style="z-index: -1;">
@@ -57,39 +57,6 @@
                     <ul id="SearchList"></ul>
                 </div>
 
-                <button class="sideButton" onclick="navigateIframe('main.html')">
-                    Főtérkép
-                </button>
-                <h2>Épületek</h2>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0a.html')">
-                    Főépület
-                </button>
-                <div id="sideButtonGroupMainbuilding" class="sidebuttonGroup" style="height: 0px;">
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0a.html')">
-                        Földszint
-                    </button>
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0b.html')">
-                        Földszint - aula
-                    </button>
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain1.html')">
-                        1. emelet
-                    </button>
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain2.html')">
-                        2. emelet
-                    </button>
-                </div>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingB.html')">
-                    "B" Épület
-                </button>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingC.html')">
-                    "C" Épület
-                </button>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingD.html')">
-                    "D" Épület
-                </button>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingE.html')">
-                    "E" Épület
-                </button>
                 <button class="sideButton sideCreatorsButton"
                     onclick="document.getElementById('modal-creators').style.display='block'">
                     Készítők
@@ -101,7 +68,7 @@
             </div>
         </div>
         <div class="main" style="max-height: 100%;">
-            <iframe src="main.html"></iframe>
+            <canvas style="width: 100%; height: 100%;"></canvas>
         </div>
     </div>
 
@@ -173,9 +140,18 @@
         </div>
     </div>
 
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
     <script src="./feedback.js"></script>
     <script src="./modals.js"></script>
-    <script src="./index.js"></script>
+    <script src="./test2.js" type="module"></script>
+    <script src="./3d.js"></script>
 </body>
 
 </html>

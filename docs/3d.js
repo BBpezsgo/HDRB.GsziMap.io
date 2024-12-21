@@ -1,16 +1,12 @@
 /** @type {HTMLInputElement} */ // @ts-ignore
 const classSearchInput = document.getElementById('myInput')
 
-function showMainBuildingChilds() {
-    document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
-}
-
 /**
  * @param {string} url
  */
 function navigateIframe(url) {
-    document.getElementsByTagName('iframe')[0].src = url
-    resetButtons(url)
+    const room = url.includes('#') ? url.split('#')[1] : null
+    window['selectRoom'](room)
     document.getElementById('sidebar').classList.add('sideHidden')
 }
 
@@ -25,42 +21,7 @@ function navigateToClassroom(buildingUrl, classroomId) {
     navigateIframe(buildingUrl)
 }
 
-function onLoad() {
-    const url = window.location.href
-    if (url.includes('#')) {
-        const hash = url.split('#')[1]
-        if (hash === 'buildingMain') {
-            navigateIframe('buildings/buildingMain.html')
-        } else if (hash === 'buildingB') {
-            navigateIframe('buildings/buildingB.html')
-        } else if (hash === 'buildingC') {
-            navigateIframe('buildings/buildingC.html')
-        } else if (hash === 'buildingD') {
-            navigateIframe('buildings/buildingD.html')
-        } else if (hash === 'buildingE') {
-            navigateIframe('buildings/buildingE.html')
-        } else if (hash === 'buildingMain.0a') {
-            navigateIframe('buildings/buildingMain0a.html')
-        } else if (hash === 'buildingMain.0b') {
-            navigateIframe('buildings/buildingMain0b.html')
-        } else if (hash === 'buildingMain.1') {
-            navigateIframe('buildings/buildingMain1.html')
-        } else if (hash === 'buildingMain.2') {
-            navigateIframe('buildings/buildingMain2.html')
-        }
-    }
-}
-
-/**
- * @param {string} url
- */
-function resetButtons(url) {
-    if (url.includes('buildingMain')) {
-        document.getElementById('sideButtonGroupMainbuilding').style.height = '210px'
-    } else {
-        document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
-    }
-}
+function onLoad() { }
 
 function search() {
     searchName(classSearchInput.value)
@@ -78,7 +39,7 @@ function searchName(query) {
     if (query.length == 0) {
         document.getElementById('SearchList').style.display = 'none'
         document.getElementById('sidebarButtons').classList.remove('sideButtonsHidden')
-        resetButtons(document.getElementsByTagName('iframe')[0]?.contentWindow.location.href ?? '')
+        window['selectRoom']('')
     } else {
         document.getElementById('SearchList').style.display = 'block'
         document.getElementById('sidebarButtons').classList.add('sideButtonsHidden')
@@ -115,7 +76,3 @@ fetch('./searchlist.json')
             .catch(() => alert(`Nem sikerült letölteni a termek listáját. A keresés funkció nem fog működni!`))
     })
     .catch(() => alert(`Nem sikerült letölteni a termek listáját. A keresés funkció nem fog működni!`))
-
-document.getElementsByTagName('iframe')[0]?.addEventListener('change', e => {
-    resetButtons(document.getElementsByTagName('iframe')[0].contentWindow.location.href)
-})
