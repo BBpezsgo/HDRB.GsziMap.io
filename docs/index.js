@@ -13,6 +13,7 @@ function navigateIframe(url) {
     resetButtons(url)
     document.getElementById('sidebar').classList.add('sideHidden')
 }
+window.navigateIframe = navigateIframe
 
 /**
  * @param {string} buildingUrl
@@ -24,8 +25,9 @@ function navigateToClassroom(buildingUrl, classroomId) {
     }
     navigateIframe(buildingUrl)
 }
+window.navigateToClassroom = navigateToClassroom
 
-function onLoad() {
+document.addEventListener('DOMContentLoaded', () => {
     const url = window.location.href
     if (url.includes('#')) {
         const hash = url.split('#')[1]
@@ -49,7 +51,7 @@ function onLoad() {
             navigateIframe('buildings/buildingMain2.html')
         }
     }
-}
+})
 
 /**
  * @param {string} url
@@ -61,10 +63,12 @@ function resetButtons(url) {
         document.getElementById('sideButtonGroupMainbuilding').style.height = '0px'
     }
 }
+window.resetButtons = resetButtons
 
 function search() {
     searchName(classSearchInput.value)
 }
+window.search = search
 
 /**
  * @param {string} query
@@ -104,7 +108,7 @@ fetch('./searchlist.json')
                     const newElement = searchList.appendChild(document.createElement('li'))
                     newElement.innerHTML = `
                             <div class="sideListButton">
-                                <button onclick="navigateToClassroom('${item.building}', '${item.id}')">
+                                <button onclick="window.navigateToClassroom('${item.building}', '${item.id}')">
                                     <span>${item.name}</span>
                                 </button>
                             </div>

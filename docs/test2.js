@@ -29,7 +29,7 @@ const material = new THREE.MeshLambertMaterial({
 })
 
 const selectionMaterial = new THREE.MeshBasicMaterial({
-    color: 0xffff00,
+    color: 0x00bbff,
     transparent: true,
 })
 

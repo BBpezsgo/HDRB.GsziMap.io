@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="onLoad()">
+<body>
     <a style="
         position: absolute;
         top: 4px;
@@ -53,7 +53,7 @@
             </div>
             <div id="sidebarButtons" class="sidebarButtons">
                 <div style="flex-grow: 1; display: flex; flex-flow: column; flex: 1;">
-                    <input type="text" id="myInput" oninput="search()" placeholder="Terem keresése...">
+                    <input type="text" id="myInput" oninput="window.search()" placeholder="Terem keresése...">
                     <ul id="SearchList"></ul>
                 </div>
 
@@ -107,7 +107,7 @@
     <div id="modal-feedback" class="modal">
         <div class="modal-content animate">
             <div class="imgcontainer">
-                <span onclick="resetFeedback(); document.getElementById('modal-feedback').style.display='none'"
+                <span onclick="window.resetFeedback(); document.getElementById('modal-feedback').style.display='none'"
                     class="close" title="Bezár"></span>
             </div>
 
@@ -117,7 +117,7 @@
                     <p>
                         Ha valami hibát tapasztal, vagy új funkciót ajánlana, itt megteheti!
                     </p>
-                    <form onsubmit="sendFeedback(); return false" method="post" id="feedback-form">
+                    <form onsubmit="window.sendFeedback(); return false" method="post" id="feedback-form">
                         <div class="mb-3 mt-3">
                             <textarea required maxlength="1024" id="feedback-form-desc" name="desc"
                                 placeholder="Visszajelzés szövege"></textarea>

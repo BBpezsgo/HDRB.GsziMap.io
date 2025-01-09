@@ -9,6 +9,7 @@ function navigateIframe(url) {
     window['selectRoom'](room)
     document.getElementById('sidebar').classList.add('sideHidden')
 }
+window.navigateIframe = navigateIframe
 
 /**
  * @param {string} buildingUrl
@@ -20,12 +21,12 @@ function navigateToClassroom(buildingUrl, classroomId) {
     }
     navigateIframe(buildingUrl)
 }
-
-function onLoad() { }
+window.navigateToClassroom = navigateToClassroom
 
 function search() {
     searchName(classSearchInput.value)
 }
+window.search = search
 
 /**
  * @param {string} query
@@ -65,7 +66,7 @@ fetch('./searchlist.json')
                     const newElement = searchList.appendChild(document.createElement('li'))
                     newElement.innerHTML = `
                             <div class="sideListButton">
-                                <button onclick="navigateToClassroom('${item.building}', '${item.id}')">
+                                <button onclick="window.navigateToClassroom('${item.building}', '${item.id}')">
                                     <span>${item.name}</span>
                                 </button>
                             </div>

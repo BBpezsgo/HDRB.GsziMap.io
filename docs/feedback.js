@@ -43,9 +43,11 @@ function sendFeedback() {
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send()
 }
+window.sendFeedback = sendFeedback
 
 function resetFeedback() {
     feedbackDoneContainer.style.display = 'none'
     feedbackFormContainer.style.display = 'block'
     feedbackDescription.value = ''
 }
+window.resetFeedback = resetFeedback

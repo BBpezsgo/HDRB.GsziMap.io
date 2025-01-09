@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="onLoad()">
+<body>
     <a style="
         position: absolute;
         top: 4px;
@@ -53,41 +53,41 @@
             </div>
             <div id="sidebarButtons" class="sidebarButtons">
                 <div style="flex-grow: 1; display: flex; flex-flow: column; flex: 1;">
-                    <input type="text" id="myInput" oninput="search()" placeholder="Terem keresése...">
+                    <input type="text" id="myInput" oninput="window.search()" placeholder="Terem keresése...">
                     <ul id="SearchList"></ul>
                 </div>
 
-                <button class="sideButton" onclick="navigateIframe('main.html')">
+                <button class="sideButton" onclick="window.navigateIframe('main.html')">
                     Főtérkép
                 </button>
                 <h2>Épületek</h2>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0a.html')">
+                <button class="sideButton" onclick="window.navigateIframe('buildings/buildingMain0a.html')">
                     Főépület
                 </button>
                 <div id="sideButtonGroupMainbuilding" class="sidebuttonGroup" style="height: 0px;">
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0a.html')">
+                    <button class="sideButton" onclick="window.navigateIframe('buildings/buildingMain0a.html')">
                         Földszint
                     </button>
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain0b.html')">
+                    <button class="sideButton" onclick="window.navigateIframe('buildings/buildingMain0b.html')">
                         Földszint - aula
                     </button>
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain1.html')">
+                    <button class="sideButton" onclick="window.navigateIframe('buildings/buildingMain1.html')">
                         1. emelet
                     </button>
-                    <button class="sideButton" onclick="navigateIframe('buildings/buildingMain2.html')">
+                    <button class="sideButton" onclick="window.navigateIframe('buildings/buildingMain2.html')">
                         2. emelet
                     </button>
                 </div>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingB.html')">
+                <button class="sideButton" onclick="window.navigateIframe('buildings/buildingB.html')">
                     "B" Épület
                 </button>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingC.html')">
+                <button class="sideButton" onclick="window.navigateIframe('buildings/buildingC.html')">
                     "C" Épület
                 </button>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingD.html')">
+                <button class="sideButton" onclick="window.navigateIframe('buildings/buildingD.html')">
                     "D" Épület
                 </button>
-                <button class="sideButton" onclick="navigateIframe('buildings/buildingE.html')">
+                <button class="sideButton" onclick="window.navigateIframe('buildings/buildingE.html')">
                     "E" Épület
                 </button>
                 <button class="sideButton sideCreatorsButton"
@@ -150,7 +150,7 @@
                     <p>
                         Ha valami hibát tapasztal, vagy új funkciót ajánlana, itt megteheti!
                     </p>
-                    <form onsubmit="sendFeedback(); return false" method="post" id="feedback-form">
+                    <form onsubmit="window.sendFeedback(); return false" method="post" id="feedback-form">
                         <div class="mb-3 mt-3">
                             <textarea required maxlength="1024" id="feedback-form-desc" name="desc"
                                 placeholder="Visszajelzés szövege"></textarea>

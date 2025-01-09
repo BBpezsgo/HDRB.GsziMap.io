@@ -1,7 +1,8 @@
 [
     {
         "building": "buildings/buildingMain0a.html",
-        "name": "Számítástechnika tanári"
+        "name": "Számítástechnika tanári",
+        "id": "szamtech_tanari"
     },
     {
         "building": "buildings/buildingMain0a.html",
@@ -30,7 +31,8 @@
     },
     {
         "building": "buildings/buildingMain0a.html",
-        "name": "Rendszergazdai szoba"
+        "name": "Rendszergazdai szoba",
+        "id": "rendszergazda"
     },
     {
         "building": "buildings/buildingMain0a.html",
@@ -39,7 +41,8 @@
     },
     {
         "building": "buildings/buildingMain0a.html",
-        "name": "Könyvtár"
+        "name": "Könyvtár",
+        "id": "konyvtar"
     },
     {
         "building": "buildings/buildingMain0a.html",
@@ -61,7 +64,8 @@
     },
     {
         "building": "buildings/buildingMain1.html",
-        "name": "Tanügyi iroda"
+        "name": "Tanügyi iroda",
+        "id": "tanugyi_iroda"
     },
     {
         "building": "buildings/buildingMain1.html",
@@ -75,7 +79,8 @@
     },
     {
         "building": "buildings/buildingMain1.html",
-        "name": "Multimédia"
+        "name": "Multimédia",
+        "id": "multimedia"
     },
     {
         "building": "buildings/buildingMain1.html",
@@ -88,7 +93,8 @@
     },
     {
         "building": "buildings/buildingMain1.html",
-        "name": "Diákstúdió"
+        "name": "Diákstúdió",
+        "id": "diakstudio"
     },
     {
         "building": "buildings/buildingMain0b.html",
@@ -97,23 +103,28 @@
     },
     {
         "building": "buildings/buildingMain2.html",
-        "name": "Tanári"
+        "name": "Tanári",
+        "id": "tanari"
     },
     {
         "building": "buildings/buildingMain2.html",
-        "name": "Igazgatóhelyettesi"
+        "name": "Igazgatóhelyettesi",
+        "id": "igazgato_helyettes_iroda"
     },
     {
         "building": "buildings/buildingMain2.html",
-        "name": "Igazgatói"
+        "name": "Igazgatói",
+        "id": "igazgato_iroda"
     },
     {
         "building": "buildings/buildingMain2.html",
-        "name": "Titkárság"
+        "name": "Titkárság",
+        "id": "titkarsag"
     },
     {
         "building": "buildings/buildingMain2.html",
-        "name": "Gazdasági iroda"
+        "name": "Gazdasági iroda",
+        "id": "gazdasagi_iroda"
     },
     {
         "building": "buildings/buildingMain2.html",
@@ -127,7 +138,8 @@
     },
     {
         "building": "main.html",
-        "name": "Porta"
+        "name": "Porta",
+        "id": "portas"
     },
     {
         "building": "buildings/buildingB.html",
@@ -135,12 +147,13 @@
     },
     {
         "building": "main.html",
-        "name": "Orvosi szoba"
+        "name": "Orvosi szoba",
+        "id": "orvosi"
     },
     {
         "building": "buildings/buildingC.html",
         "name": "Maczik Mihály András",
-        "id": "maczik-mihaly-andras"
+        "id": "maczik_mihaly_andras_automatizalasi_labor"
     },
     {
         "building": "buildings/buildingB.html",
@@ -158,7 +171,8 @@
     },
     {
         "building": "buildings/buildingD.html",
-        "name": "CNC oktató"
+        "name": "CNC oktató",
+        "id": "cnc"
     },
     {
         "building": "buildings/buildingD.html",
@@ -187,11 +201,11 @@
     {
         "building": "buildings/buildingE.html",
         "name": "Gábor Dénes",
-        "id": "gabor-denes"
+        "id": "gabor_denes"
     },
     {
         "building": "buildings/buildingE.html",
-        "name": "Hardver-mérő"
+        "name": "hardware_mero"
     },
     {
         "building": "buildings/buildingE.html",
