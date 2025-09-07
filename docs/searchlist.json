@@ -156,6 +156,11 @@
         "id": "maczik_mihaly_andras_automatizalasi_labor"
     },
     {
+        "building": "buildings/buildingC.html",
+        "name": "Asimov",
+        "id": "asimov"
+    },
+    {
         "building": "buildings/buildingB.html",
         "name": "Fémipari műhely"
     },
